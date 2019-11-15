@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Assemble All Config of org.eclipse.pde.container.feature" default="main">
+	<macrodef name="assemble">
+		<attribute name="config" />
+		<attribute name="element" />
+		<attribute name="dot" />
+		<attribute name="scriptPrefix" />
+		<sequential>
+			<condition property="defaultAssemble.@{config}" value="defaultAssemble" else="assemble.@{element}@{dot}@{config}"			>
+				<isset property="defaultAssemblyEnabled"/>
+			</condition>
+			<condition property="customOrDefault.@{config}" value="assemble.@{element}@{dot}@{config}" else="${defaultAssemble.@{config}}"			>
+				<isset property="assemble.@{element}@{dot}@{config}"/>
+			</condition>
+			<ant antfile="${customTargets}" target="${customOrDefault.@{config}}">
+				<property name="assembleScriptName" value="@{scriptPrefix}.@{element}@{dot}@{config}.xml"/>
+				<property name="config" value="@{config}"/>
+				<property name="element" value="@{element}"/>
+			</ant>
+		</sequential>
+	</macrodef>
+
+	<target name="main">
+		<assemble  config="p2" element="org.eclipse.pde.container.feature" dot="." scriptPrefix="assemble"		/>
+		<assemble  config="group.group.group" element="org.eclipse.pde.container.feature" dot="." scriptPrefix="assemble"		/>
+	</target>
+</project>

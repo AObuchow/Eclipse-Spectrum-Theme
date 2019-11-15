@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.pde.container.feature" version="1.0">
+	<includes id="Modern_Dark_Feature.source" version="1.0.1.qualifier"/>
+	<includes id="Modern_Dark_Feature" version="1.0.1.qualifier"/>
+</feature>

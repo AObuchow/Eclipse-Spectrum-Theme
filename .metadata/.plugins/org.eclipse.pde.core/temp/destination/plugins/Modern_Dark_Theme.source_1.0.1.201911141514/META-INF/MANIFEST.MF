@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: Modern_Dark_Theme.source
+Bundle-Version: 1.0.1.201911141514
+Eclipse-SourceBundle: Modern_Dark_Theme;version="1.0.1.201911141514";roo
+ ts:="."
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+
+

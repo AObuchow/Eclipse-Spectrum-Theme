@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="Modern_Dark_Feature"
+      label="Modern Dark Theme"
+      version="1.0.1.qualifier"
+      provider-name="aobuchow">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright>
+      Copyright AObuchow 2019.
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      
+   </license>
+
+   <plugin
+         id="Modern_Dark_Theme"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

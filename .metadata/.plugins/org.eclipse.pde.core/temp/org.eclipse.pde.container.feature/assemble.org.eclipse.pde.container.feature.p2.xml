@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Publish p2 metadata" default="main">
+	<property name="p2.build.repo" value="file:${buildDirectory}/buildRepo"/>
+	<property name="assemblyTempDir" value="${buildDirectory}/tmp"/>
+	<property name="jarProcessor.sign" value="false"/>
+	<available property="customAssembly" file="${builder}/customAssembly.xml" value="${builder}/customAssembly.xml"/>
+	<property name="p2.mirror.raw" value="false"/>
+	<property name="p2.mirror.slicing.filter" value=""/>
+	<property name="p2.mirror.slicing.followOnlyFilteredRequirements" value="false"/>
+	<property name="p2.mirror.slicing.followStrict" value="false"/>
+	<property name="p2.mirror.slicing.includeFeatures" value="true"/>
+	<property name="p2.mirror.slicing.includeNonGreedy" value="false"/>
+	<property name="p2.mirror.slicing.includeOptional" value="false"/>
+	<property name="p2.mirror.slicing.latestVersionOnly" value="false"/>
+	<property name="p2.mirror.slicing.platformFilter" value=""/>
+
+	<macrodef name="customGather">
+		<attribute name="dir" />
+		<attribute name="propertyName" />
+		<attribute name="propertyValue" />
+		<attribute name="subFolder" />
+		<attribute name="projectName" />
+		<sequential>
+			<ant antfile="build.xml" dir="@{dir}" target="publish.bin.parts">
+				<property name="@{propertyName}" value="@{propertyValue}"/>
+			</ant>
+			<antcall target="customAssembly">
+				<param name="projectLocation" value="${basedir}/@{dir}"/>
+				<param name="projectName" value="@{projectName}"/>
+				<param name="@{propertyName}" value="@{propertyValue}"/>
+				<param name="target.folder" value="@{propertyValue}@{subFolder}"/>
+				<param name="customTarget" value="gather.bin.parts"/>
+			</antcall>
+		</sequential>
+	</macrodef>
+
+	<target name="main">
+		<antcall target="gather.bin.parts"/>
+		<antcall target="customAssembly">
+			<param name="customTarget" value="post.gather.bin.parts"/>
+		</antcall>
+
+
+		<antcall target="generate.p2.metadata"/>
+	</target>
+
+	<target name="gather.bin.parts">
+		<customGather dir="plugins/Modern_Dark_Theme.source_1.0.1.201911141514" projectName="Modern_Dark_Theme.source_1.0.1.201911141514" propertyName="destination.temp.folder" propertyValue="${eclipse.plugins}" subFolder="" />
+		<customGather dir="../../../../../Modern Dark Theme" projectName="Modern_Dark_Theme_1.0.1.201911141514" propertyName="destination.temp.folder" propertyValue="${eclipse.plugins}" subFolder="" />
+		<customGather dir="features/Modern_Dark_Feature.source/" projectName="Modern_Dark_Feature.source_1.0.1.201911141514" propertyName="feature.base" propertyValue="${eclipse.base}" subFolder="/features" />
+		<customGather dir="../../../../../Modern Dark Feature/" projectName="Modern_Dark_Feature_1.0.1.201911141514" propertyName="feature.base" propertyValue="${eclipse.base}" subFolder="/features" />
+		<eclipse.publish.featuresAndBundles repository="${p2.build.repo}" site="${p2.category.site}" category="${p2.category.definition}" siteQualifier="${p2.category.prefix}" categoryVersion="${p2.category.version}">
+			<contextRepository metadata="true" location="file:/home/aobuchow/.var/app/org.eclipse.Sdk/eclipse/configuration/org.eclipse.osgi/2416/data/listener_1925729951/"			/>
+			<contextRepository metadata="true" location="file:/home/aobuchow/.var/app/org.eclipse.Sdk/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/SDKProfile.profile/"			/>
+		</eclipse.publish.featuresAndBundles>
+	</target>
+
+	<target name="customAssembly" if="customAssembly">
+		<ant antfile="${customAssembly}" target="${customTarget}" inheritAll="true"/>
+	</target>
+
+	<target name="sign.p2.repository">
+	</target>
+
+	<target name="generate.p2.metadata">
+		<property name="p2.flavor" value="tooling"/>
+		<delete dir="${assemblyTempDir}/p2.branding"/>
+
+
+	</target>
+</project>

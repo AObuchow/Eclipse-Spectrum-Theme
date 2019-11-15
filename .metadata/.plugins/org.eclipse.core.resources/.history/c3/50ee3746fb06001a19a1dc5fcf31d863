@@ -1,0 +1,34 @@
+/*  @import url("platform:/plugin/org.eclipse.ui.themes/css/e4-dark.css"); */
+@import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_globalstyle.css"); /* Remove this to have ONLY the main IDE shell dark */
+@import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_partstyle.css");
+@import url("color_definitions.css");
+
+@import url("tabstyle.css");
+
+
+
+
+
+
+.MPart Hyperlink,
+.MPart ImageHyperLink {
+	background-color: #2F2F2F;
+	color: '#org-eclipse-ui-workbench-LINK_COLOR';
+}
+
+
+.MPartStack.active Table {
+    background-color: #2F2F2F;
+    color: #CCC;
+}
+.View {
+    background-color: #313538;
+    color: #F5F5F5;
+}
+/* ###################### Top Toolbar ########################## */
+#org-eclipse-ui-main-toolbar, #PerspectiveSwitcher {
+    eclipse-perspective-keyline-color: #17171b;
+    background-color: #17171b #17171b 100%;
+    handle-image: none;
+    color: #EBE8E4;
+}

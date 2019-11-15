@@ -1,0 +1,16 @@
+content_assist_number_of_computers=16
+content_assist_proposals_background=52,57,61
+content_assist_proposals_foreground=238,238,238
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=17
+pf_coloring_argument=239,41,41
+pf_coloring_assignment=238,238,236
+pf_coloring_comment=252,233,79
+pf_coloring_key=238,238,236
+pf_coloring_value=0,255,205
+sourceHoverBackgroundColor=47,47,47
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modern_Dark_Theme
+Bundle-SymbolicName: Modern_Dark_Theme;singleton:=true
+Bundle-Version: 1.0.1.201911141514
+Bundle-Vendor: aobuchow
+Automatic-Module-Name: Modern_Dark_Theme
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.e4.ui.css.swt.theme
+
+

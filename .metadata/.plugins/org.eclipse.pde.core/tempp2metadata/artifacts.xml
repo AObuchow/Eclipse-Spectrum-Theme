@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='file:/home/aobuchow/Documents/Eclipse%20Workspaces/Modern_Dark_Theme/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1573766621359'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='4'>
+    <artifact classifier='osgi.bundle' id='Modern_Dark_Theme' version='1.0.1.201911141514'>
+      <properties size='1'>
+        <property name='download.size' value='4764'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Modern_Dark_Feature.source' version='1.0.1.201911141514'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='404'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='Modern_Dark_Theme.source' version='1.0.1.201911141514'>
+      <properties size='1'>
+        <property name='download.size' value='651'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Modern_Dark_Feature' version='1.0.1.201911141514'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='426'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>
