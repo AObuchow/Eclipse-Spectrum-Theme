@@ -38,7 +38,7 @@
 
 
    <repositories>
-      <repository location="http://https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/Export/" enabled="true" />
+      <repository location="https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/Export/" enabled="true" />
    </repositories>
 
    <preferencesInfo>
