@@ -144,7 +144,7 @@ ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR {
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR {
   color: #e3e3e3;
   category: "#org-eclipse-ui-presentation-default";
-  label: url("plCTabFolder { swt-selected-tab-fill: #F79402; }atform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_UNSELECTED_TEXT_COLOR");
+  label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_UNSELECTED_TEXT_COLOR");
 }
 
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR {

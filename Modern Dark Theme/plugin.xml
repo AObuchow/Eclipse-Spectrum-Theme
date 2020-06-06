@@ -5,15 +5,9 @@
          point="org.eclipse.e4.ui.css.swt.theme">
       <theme
             basestylesheeturi="css/Modern_Dark.css"
-            id="Modern Dark Theme.id"
+            id="modern.dark.theme.id"
             label="Modern Dark Theme">
       </theme>
-      <stylesheet
-            uri="css/e4-dark_preferencestyle.css">
-         <themeid
-               refid="Modern Dark Theme.id">
-         </themeid>
-      </stylesheet>
    </extension>
 
 </plugin>
