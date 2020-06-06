@@ -2,15 +2,15 @@
 <feature
       id="Modern_Dark_Feature"
       label="Modern Dark Theme"
-      version="1.0.1.qualifier"
+      version="1.0.2.qualifier"
       provider-name="aobuchow">
 
-   <description url="http://www.example.com/description">
+   <description url="https://github.com/AObuchow/Eclipse-Modern-Dark-Theme">
       Modern Dark Theme for Eclipse by Andrew Obuchowicz
    </description>
 
    <copyright>
-      Copyright AObuchow 2019.
+      Copyright AObuchow 2020.
    </copyright>
 
    <license url="http://www.example.com/license">
@@ -21,7 +21,7 @@
          id="Modern_Dark_Theme"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.2.qualifier"
          unpack="false"/>
 
 </feature>

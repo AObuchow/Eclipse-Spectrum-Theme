@@ -11,6 +11,23 @@
       </vmArgsMac>
    </launcherArgs>
 
+   <windowImages/>
+
+   <launcher>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <license>
+        <text>
+   LIcense not currently set.
+         </text>
+   </license>
+
    <plugins>
    </plugins>
 
@@ -19,5 +36,16 @@
       <feature id="org.eclipse.platform" installMode="root"/>
    </features>
 
+
+   <repositories>
+      <repository location="http://https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/Export/" enabled="true" />
+   </repositories>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>
