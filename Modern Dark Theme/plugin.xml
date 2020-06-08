@@ -6,7 +6,7 @@
       <theme
             basestylesheeturi="css/Modern_Dark.css"
             id="modern.dark.theme.id"
-            label="Modern Dark Theme">
+            label="Modern Dark">
       </theme>
    </extension>
 

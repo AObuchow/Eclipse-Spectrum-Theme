@@ -194,8 +194,22 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
     color: #EBE8E4;
 }
 
+/* ############################## Console View ############################## */
+
+#org-eclipse-ui-console-ConsoleView .MPart > Composite,
+#org-eclipse-ui-console-ConsoleView .MPart StyledText,
+#org-eclipse-ui-console-ConsoleView .MPart PageBook Label {
+    background-color: black;
+    color: white;
+}
 
 /* ############################## Global Styles ############################## */
+
+/* call hierarchy view and more */
+Tree {
+	 color: white;
+}
+
 
 Shell,
 Composite, ScrolledComposite, ExpandableComposite, Canvas, TabFolder, CLabel, Label,
