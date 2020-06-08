@@ -2,7 +2,7 @@
 <feature
       id="Modern_Dark_Feature"
       label="Modern Dark Theme"
-      version="1.0.4.qualifier"
+      version="1.0.5.qualifier"
       provider-name="aobuchow">
 
    <description url="https://github.com/AObuchow/Eclipse-Modern-Dark-Theme">
@@ -21,7 +21,7 @@
          id="Modern_Dark_Theme"
          download-size="0"
          install-size="0"
-         version="1.0.4.qualifier"
+         version="1.0.5.qualifier"
          unpack="false"/>
 
 </feature>
