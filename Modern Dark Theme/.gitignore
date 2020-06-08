@@ -1,8 +1,7 @@
 # Maven
 /target/
 /bin/
-# Eclipse Core      
-.project
+# Eclipse Core
 /.settings/
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
