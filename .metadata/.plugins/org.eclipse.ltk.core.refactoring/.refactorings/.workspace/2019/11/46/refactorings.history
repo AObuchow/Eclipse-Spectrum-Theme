@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;org.eclipse.jface&apos;" deleteContents="false" description="Delete resource &apos;org.eclipse.jface&apos;" element1="/org.eclipse.jface" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1573764440266"/>
-</session>

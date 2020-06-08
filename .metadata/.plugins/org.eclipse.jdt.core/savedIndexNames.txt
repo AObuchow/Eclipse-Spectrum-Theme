@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/home/aobuchow/Documents/Eclipse Workspaces/Modern_Dark_Theme/.metadata/.plugins/org.eclipse.jdt.core
-1168982380.index
-1558221869.index
-285176888.index

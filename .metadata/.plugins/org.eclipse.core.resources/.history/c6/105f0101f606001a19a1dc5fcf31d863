@@ -1,7 +1,0 @@
-@import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_ide_colorextensions.css");
-@import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_globalstyle.css"); /* Remove this to have ONLY the main IDE shell dark */
-@import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_partstyle.css");
-@import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark-drag-styling.css");
-
-@import url("color_definition.css");
-@import url("tabstyle.css");
