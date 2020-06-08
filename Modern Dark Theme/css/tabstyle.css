@@ -51,7 +51,7 @@ CTabFolder Tree, CTabFolder Canvas {
 .MPartStack.active Tree,
 .MPartStack.active CTabFolder Canvas{
 	background-color: #16181c;
-	/*color: #FFFFD5;*/ /* set the font color of the project explorer */
+	/* color: #FFFFD5; /* /* set the font color of the project explorer */
 	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
 	swt-selection-foreground-color: black;
 }
