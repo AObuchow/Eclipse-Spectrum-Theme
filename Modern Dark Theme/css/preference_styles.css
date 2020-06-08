@@ -73,8 +73,10 @@ IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-w
 		'org.eclipse.pde.genericeditor.extension.editor.color.comment=93,134,75'
 		'org.eclipse.pde.genericeditor.extension.editor.color.header=115,130,140'
 		'org.eclipse.pde.genericeditor.extension.editor.color.quote=118,200,244'
-		'org.eclipse.pde.genericeditor.extension.editor.color.tag=255,255,255'
+		'org.eclipse.pde.genericeditor.extension.editor.color.tag=121,171,255'
 		'org.eclipse.pde.genericeditor.extension.editor.color.text=207,212,216'
+		'org.eclipse.debug.ui.consoleBackground=0,0,0'
+		'org.eclipse.debug.ui.outColor=255,255,255'
 }
 
 /* ############################## PDE ############################## */
