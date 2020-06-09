@@ -12,4 +12,4 @@ Screenshots taken on Linux using with [Abrus-dark](https://github.com/vinceliuic
 
 ## Update Site
 
-`https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/Export/`
+`https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/export/`
