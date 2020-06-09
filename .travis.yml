@@ -1,0 +1,10 @@
+language: java
+jdk: openjdk14
+
+install: true
+script: mvn install
+
+# keep the local mvn repo between 2 runs
+cache:
+    directories:
+    - $HOME/.m2
