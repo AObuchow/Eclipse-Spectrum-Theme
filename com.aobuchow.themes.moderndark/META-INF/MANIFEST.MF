@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Modern_Dark_Theme
-Bundle-SymbolicName: Modern_Dark_Theme;singleton:=true
+Bundle-Name: Modern Dark Theme
+Bundle-SymbolicName: com.aobuchow.themes.moderndark;singleton:=true
 Bundle-Version: 1.0.5.qualifier
 Bundle-Vendor: aobuchow
 Automatic-Module-Name: Modern_Dark_Theme

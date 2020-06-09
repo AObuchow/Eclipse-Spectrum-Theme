@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Eclipse Modern Dark Theme" uid="Modern Dark Theme" useFeatures="true" includeLaunchers="true">
+<product name="Modern Dark Theme" uid="moderndark" id="com.aobuchow.themes.moderndark.product" application="org.eclipse.ui.ide.workbench" version="1.0.5" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -288,8 +288,8 @@ No third-party beneficiary rights are created under this Agreement.
 
 Exhibit A - Form of Secondary Licenses Notice
 
-&quot;This Source Code may also be made available under the following 
-Secondary Licenses when the conditions for such availability set forth 
+&quot;This Source Code may also be made available under the following
+Secondary Licenses when the conditions for such availability set forth
 in the Eclipse Public License, v. 2.0 are satisfied: {name license(s),
 version(s), and exceptions or additional permissions here}.&quot;
 
@@ -309,13 +309,27 @@ version(s), and exceptions or additional permissions here}.&quot;
    </plugins>
 
    <features>
-      <feature id="Modern_Dark_Feature" installMode="root"/>
+      <feature id="com.aobuchow.themes.moderndark.feature" installMode="root"/>
       <feature id="org.eclipse.platform" installMode="root"/>
+      <feature id="org.eclipse.emf.ecore" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.user.ui" installMode="root"/>
+      <feature id="org.eclipse.help" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.extras.feature" installMode="root"/>
+      <feature id="org.eclipse.rcp" installMode="root"/>
+      <feature id="org.eclipse.emf.common" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.core.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.core.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient45.feature" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.rcp.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.core.ssl.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.ssl.feature" installMode="root"/>
+      <feature id="org.eclipse.e4.rcp" installMode="root"/>
    </features>
 
 
    <repositories>
-      <repository location="https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/Export/" enabled="true" />
+      <repository location="https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/export/" enabled="true" />
    </repositories>
 
    <preferencesInfo>

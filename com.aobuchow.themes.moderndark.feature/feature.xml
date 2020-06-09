@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="Modern_Dark_Feature"
+      id="com.aobuchow.themes.moderndark.feature"
       label="Modern Dark Theme"
       version="1.0.5.qualifier"
       provider-name="aobuchow">
@@ -18,7 +18,7 @@
    </license>
 
    <plugin
-         id="Modern_Dark_Theme"
+         id="com.aobuchow.themes.moderndark"
          download-size="0"
          install-size="0"
          version="1.0.5.qualifier"

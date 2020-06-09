@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<site>
+	<feature id="com.aobuchow.themes.moderndark.feature">
+		<category name="com.aobuchow.themes.moderndark.update" />
+	</feature>
+	<category-def name="com.aobuchow.themes.moderndark.update" label="Modern Dark Theme">
+		<description>
+         Modern Dark Theme by Andrew Obuchowicz.
+      </description>
+	</category-def>
+
+</site>

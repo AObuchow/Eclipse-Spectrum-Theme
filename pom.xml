@@ -1,0 +1,22 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.aobuchow.themes.moderndark</groupId>
+	<artifactId>root</artifactId>
+	<version>1.0.5-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>com.aobuchow.themes.moderndark</groupId>
+		<artifactId>releng</artifactId>
+		<version>1.0.5-SNAPSHOT</version>
+		<relativePath>./releng</relativePath>
+	</parent>
+
+	<modules>
+		<module>com.aobuchow.themes.moderndark</module>
+		<module>com.aobuchow.themes.moderndark.feature</module>
+		<module>com.aobuchow.themes.moderndark.product</module>
+		<module>releng-updatesite</module>
+	</modules>
+
+</project>
