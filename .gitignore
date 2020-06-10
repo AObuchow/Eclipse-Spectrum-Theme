@@ -1,6 +1,9 @@
 /.metadata/
 # Maven
 /target/
+/aobuchow.themes.moderndark/target/
+/aobuchow.themes.moderndark/bin/
+/aobuchow.themes.moderndark.feature/target/
 /bin/
 # Eclipse Core      
 /.settings/

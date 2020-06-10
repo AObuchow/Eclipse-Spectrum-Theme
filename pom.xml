@@ -15,7 +15,6 @@
 	<modules>
 		<module>com.aobuchow.themes.moderndark</module>
 		<module>com.aobuchow.themes.moderndark.feature</module>
-		<module>com.aobuchow.themes.moderndark.product</module>
 		<module>releng-updatesite</module>
 	</modules>
 
