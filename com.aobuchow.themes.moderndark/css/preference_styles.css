@@ -54,7 +54,6 @@ IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes-modern-dark-edi
 IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-workbench { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
 	preferences:
 		'ACTIVE_HYPERLINK_COLOR=40,235,195'
-		'CONFLICTING_COLOR=240,15,66'
 		'CONTENT_ASSIST_BACKGROUND_COLOR=52,57,61'
 		'CONTENT_ASSIST_FOREGROUND_COLOR=238,238,238'
 		'org.eclipse.ui.workbench.INFORMATION_BACKGROUND=81,86,88'
@@ -66,6 +65,9 @@ IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-w
 		'INCOMING_COLOR=31,179,235'
 		'OUTGOING_COLOR=238,238,238'
 		'RESOLVED_COLOR=108,210,17'
+		'ADDITION_COLOR=0,255,205' 
+		'EDITION_COLOR=255,0,185'
+		'CONFLICTING_COLOR=240,15,66'
 		'org.eclipse.search.ui.match.highlight=206,92,0'
 		'org.eclipse.ui.editors.rangeIndicatorColor=27,118,153'
 		'org.eclipse.jface.REVISION_NEWEST_COLOR=75,44,3'
