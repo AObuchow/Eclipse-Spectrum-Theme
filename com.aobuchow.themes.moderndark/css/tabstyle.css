@@ -10,31 +10,33 @@
  *
  *******************************************************************************/
 
-.MPartStack {
+CTabFolder {
     swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
     swt-selected-tab-fill: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START' '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END' 100% 100%; /* title background for selected tab */
     swt-unselected-tabs-color: '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START' '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END' 100% 100%; /* title background for unselected tab */
     swt-outer-keyline-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_OUTER_KEYLINE_COLOR'; /* border color for whole tabs container */
     swt-inner-keyline-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR';
-    /*swt-tab-outline: '#org-eclipse-ui-workbench-PRIMARY_COLOR_DULL'; /* border color for selected tab */
-    padding: 0px 2px 2px;
-    swt-selected-tab-highlight: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; 
-	swt-selected-highlight-top: true;
+ 	swt-tab-outline: #0f1114;
+    padding: 2px 2px;
     swt-shadow-visible: false;
     swt-mru-visible: true;
 	swt-simple: true;
     swt-corner-radius: 0px;
     swt-unselected-hot-tab-color-background: #161616; /* Bug 465711 */
+    swt-selected-tab-highlight: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; 
+	swt-selected-highlight-top: true;
 }
+
 
 CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
     /* Set the styles for the bottom inner tabs (Bug 430051): */
     swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
     swt-unselected-hot-tab-color-background: #161616; /* Bug 465711 */
-    swt-selected-tab-highlight: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; 
-	swt-selected-highlight-top: true;
  	swt-selected-tab-fill: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START' '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END' 100% 100%; /* title background for selected tab */
+    swt-selected-tab-highlight: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; 
+	swt-selected-highlight-top: false;
 }
+
 
 .MPartStack.active {
     swt-selected-tab-fill: '#org-eclipse-ui-workbench-PRIMARY_COLOR' '#org-eclipse-ui-workbench-PRIMARY_COLOR' 100% 100%; /* title background for selected tab */
@@ -50,29 +52,6 @@ CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
     swt-outer-keyline-color: #17171b; /* border color for whole tabs container */
 }
 
-
-
-CTabFolder Tree, CTabFolder Canvas {
-    background-color: #16181c;
-   	/* color: #FFFFD5; */ /* set the font color of the project explorer */
-	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-	swt-selection-foreground-color: black;
-}
-
-.MPartStack.active Tree,
-.MPartStack.active CTabFolder Canvas{
-	background-color: #16181c;
-	/* color: #FFFFD5; /* /* set the font color of the project explorer */
-	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-	swt-selection-foreground-color: black;
-}
-
-Tree, Table {
-	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-	swt-selection-foreground-color: black;
-	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-}
 
 
 

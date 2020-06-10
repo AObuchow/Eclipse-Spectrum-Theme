@@ -41,7 +41,37 @@ CTabItem:selected CLabel {
 .MPartStack.active.noFocus > CTabItem:selected {
     color: '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR';
 }
-/* ################################################ */
+
+/* ###################### Tree, Table ########################## */
+
+Tree, Table {
+	color: white;
+	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+	swt-selection-foreground-color: black;
+	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+}
+
+/* Views such as Project Explorer */
+.MPartStack Tree,
+.MPartStack CTabFolder Canvas{
+	/*background-color: #16181c; */
+	/* color: #FFFFD5; */ /* set the font color of the views */
+	/* swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';' disabled as these doesn't seem to work anymore 
+	swt-selection-foreground-color: black;
+	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';*/
+}
+
+.MPartStack.active Table {
+    background-color: 'ColorDefinition#org-eclipse-ui-workbench-SECONDARY_COLOR';
+    color: #CCC;
+}
+.View {
+    background-color: #313538;
+    color: #F5F5F5;
+}
+
 
 /* ###################### Hyperlink ########################## */
 
@@ -68,21 +98,11 @@ CTabItem:selected CLabel {
 }
 /* ################################################ */
 
-.MPartStack.active Table {
-    background-color: 'ColorDefinition#org-eclipse-ui-workbench-SECONDARY_COLOR';
-    color: #CCC;
-}
-.View {
-    background-color: #313538;
-    color: #F5F5F5;
-}
-
 /* Color in between text editors */
 .MPartSashContainer {
     background-color: #17171b;
     color: #EEEEEE;
 }
-
 
 /* ###################### Form Editors ########################## */
 
@@ -215,12 +235,6 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
 }
 
 /* ############################## Global Styles ############################## */
-
-/* call hierarchy view and more */
-Tree {
-	 color: white;
-}
-
 
 Shell,
 Composite, ScrolledComposite, ExpandableComposite, Canvas, TabFolder, CLabel, Label,
