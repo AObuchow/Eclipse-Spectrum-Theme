@@ -46,6 +46,8 @@ CTabItem:selected CLabel {
 
 Tree, Table {
 	color: white;
+	swt-header-color: white;
+ 	swt-header-background-color: #2c2c30; /* TODO: a color preference for the header colors should be defined */
 	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
 	swt-selection-foreground-color: black;
 	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
