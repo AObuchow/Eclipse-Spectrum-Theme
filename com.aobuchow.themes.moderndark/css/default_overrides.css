@@ -190,13 +190,20 @@ TabbedPropertyTitle {
 
 Section {
     background-color: #17171b;
-    color: #AEBED0;
+    color: '#org-eclipse-ui-workbench-LINK_COLOR';
     background-color-titlebar: #17171b;
     background-color-gradient-titlebar: #17171b;
     border-color-titlebar: #17171b;
-    swt-titlebar-color: 'ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR';
-	tb-toggle-hover-color: 'ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR';
-	tb-toggle-color: 'ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR';
+	swt-titlebar-color: '#org-eclipse-ui-workbench-LINK_COLOR';
+	tb-toggle-hover-color: #7DFFCF;
+	tb-toggle-color: #7DFFCF;
+}
+
+ExpandableComposite {
+	background-color: #17171b;
+    swt-titlebar-color: '#org-eclipse-ui-workbench-LINK_COLOR';
+	tb-toggle-hover-color: #7DFFCF;
+	tb-toggle-color: #7DFFCF;
 }
 
 /* ###################### Top Toolbar ########################## */
@@ -237,6 +244,35 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
 }
 
 /* ############################## Global Styles ############################## */
+
+.MPart Composite,
+.MPart Composite > *,
+.MPart Composite > * > *,
+.MPart Label,
+.MPart ScrolledForm,
+.MPart Form,
+.MPart Section,
+.MPart FormText,
+.MPart Link,
+.MPart Sash,
+.MPart Button,
+.MPart Group,
+.MPart SashForm,
+.MPart Tree,
+.MPart FilteredTree,
+.MPart RegistryFilteredTree,
+.MPart PageSiteComposite,
+.MPart DependenciesComposite,
+.MPart Text[style~='SWT.READ_ONLY'],
+.MPart FigureCanvas,
+.MPart ListEditorComposite,
+.MPart ScrolledComposite,
+.Mpart ScrolledComposite ProgressInfoItem,
+.MPart Form ScrolledPageBook,
+.MPart DependenciesComposite > SashForm > Section > * { /* Section > DependenciesComposite$... */
+    background-color: #17171b;
+    color:#eeeeee;
+}
 
 Shell,
 Composite, ScrolledComposite, ExpandableComposite, Canvas, TabFolder, CLabel, Label,
