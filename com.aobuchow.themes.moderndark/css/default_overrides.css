@@ -20,7 +20,7 @@
 
 CTabItem,
 CTabItem CLabel {
-   /*  background-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END'; HACK for background of CTabFolder inner Toolbars */
+   /*  background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; HACK for background of CTabFolder inner Toolbars */
     color: '#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR';
 }
 CTabItem:selected,
@@ -30,7 +30,7 @@ CTabItem:selected CLabel {
 
 .MPartStack.active > CTabItem,
 .MPartStack.active > CTabItem CLabel {
-   /* background-color: '#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END';  HACK for background of CTabFolder inner Toolbars */
+   /* background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';  HACK for background of CTabFolder inner Toolbars */
     color: '#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR';
 }
 .MPartStack.active > CTabItem:selected,
@@ -63,6 +63,11 @@ Tree, Table {
 	swt-selection-foreground-color: black;
 	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
 	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';*/
+}
+
+/* Project Explorer */
+Composite#org-eclipse-ui-navigator-ProjectExplorer * {
+  font-family: '#com-aobuchow-themes-moderndark-font-projectExplorer';
 }
 
 .MPartStack.active Table {
@@ -286,10 +291,16 @@ DependenciesComposite, ListEditorComposite, WrappedPageBook,
 CompareStructureViewerSwitchingPane, CompareContentViewerSwitchingPane,
 QualifiedNameComponent, RefactoringStatusViewer,
 MessageLine,
-Button /* SWT-BUG: checkbox inner label font color is not accessible */,
+Button ,
 Composite > *,
 Composite > * > *,
 Group > StyledText {
     background-color: #17171b;
     color:#eeeeee;
+}
+
+
+/* Toolbar should inherit the colors of its container to avoid drawing artifacts*/
+ToolBar {
+	background-color:inherit;
 }

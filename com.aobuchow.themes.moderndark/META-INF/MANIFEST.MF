@@ -6,4 +6,5 @@ Bundle-Version: 1.0.6.qualifier
 Bundle-Vendor: aobuchow
 Automatic-Module-Name: Modern_Dark_Theme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.eclipse.e4.ui.css.swt.theme
+Require-Bundle: org.eclipse.e4.ui.css.swt.theme,
+ org.eclipse.ui

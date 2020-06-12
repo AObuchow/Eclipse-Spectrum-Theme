@@ -40,10 +40,11 @@ ThemesExtension {
 
 ColorDefinition#org-eclipse-ui-workbench-PRIMARY_COLOR {
   color: #d70000;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_START");
+  category: "#com-aobuchow-themes-moderndark-themeCategory";
+  label: "Accent Color";
 }
 
+/* TODO: Remove, not being used anywhere */
 ColorDefinition#org-eclipse-ui-workbench-PRIMARY_COLOR_DULL {
   color: #800000;
   category: "#org-eclipse-ui-presentation-default";
@@ -62,18 +63,20 @@ ColorDefinition#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_START");
 }
 
+/* TODO: remove, only being used in platform themes */
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END {
   color: #2c2c30;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_END");
 }
 
+/* TODO: should be linked as the background color? */
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START {
   color: #2d2d2d;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_BG_START");
 }
-
+/* TODO: redundant (same color as above color definition) */
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END {
   color: #2d2d2d;
   category: "#org-eclipse-ui-presentation-default";
@@ -92,6 +95,7 @@ ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_INNER_KEYLINE_COLOR");
 }
 
+/* TODO: remove, only being used in platform themes */
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR {
   color: #800000;
   category: "#org-eclipse-ui-presentation-default";
@@ -104,30 +108,35 @@ ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_UNSELECTED_TEXT_COLOR");
 }
 
+/* TODO: remove, only being used in platform themes */
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR {
   color: #ffffff;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_SELECTED_TEXT_COLOR");
 }
 
+/* TODO: redundant (new preference for an already-used color) */
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_START {
   color: #2c2c30;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_UNSELECTED_TABS_COLOR_START");
 }
 
+/* TODO: redundant (new preference for an already-used color) */
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_END {
   color: #2c2c30;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_UNSELECTED_TABS_COLOR_END");
 }
 
+/* TODO: remove, only being used in platform themes */
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_START {
   color: #d70000;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_BG_START");
 }
 
+/* TODO: redundant (new preference for an already-used color) */
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END {
   color: #d70000;
   category: "#org-eclipse-ui-presentation-default";
@@ -146,6 +155,7 @@ ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_INNER_KEYLINE_COLOR {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_INNER_KEYLINE_COLOR");
 }
 
+/* TODO: remove, only being used in platform themes */
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR {
   color: #d70000;
   category: "#org-eclipse-ui-presentation-default";
@@ -153,7 +163,7 @@ ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR {
 }
 
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR {
-  color: #e3e3e3;
+  color: white;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_UNSELECTED_TEXT_COLOR");
 }
