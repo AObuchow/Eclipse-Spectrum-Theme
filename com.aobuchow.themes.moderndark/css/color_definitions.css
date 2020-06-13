@@ -12,30 +12,26 @@
 
 ThemesExtension {
   color-definition: "#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START",
-    "#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END",
     "#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START",
     "#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END",
     "#org-eclipse-ui-workbench-INACTIVE_TAB_OUTER_KEYLINE_COLOR",
     "#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR",
-    "#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR",
     "#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR",
     "#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR",
     "#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_START",
     "#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_END",
-    "#org-eclipse-ui-workbench-ACTIVE_TAB_BG_START",
     "#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END",
     "#org-eclipse-ui-workbench-ACTIVE_TAB_OUTER_KEYLINE_COLOR",
     "#org-eclipse-ui-workbench-ACTIVE_TAB_INNER_KEYLINE_COLOR",
-    "#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR",
     "#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR",
     "#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR",
     "#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_START",
     "#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_END",
     "#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR",
     "#org-eclipse-ui-workbench-PRIMARY_COLOR",
-    "#org-eclipse-ui-workbench-PRIMARY_COLOR_DULL",
     "#org-eclipse-ui-workbench-SECONDARY_COLOR",
-    "#org-eclipse-ui-workbench-LINK_COLOR";
+    "#org-eclipse-ui-workbench-LINK_COLOR",
+	"#com-aobuchow-themes-moderndark-BACKGROUND_COLOR";
 }
 
 ColorDefinition#org-eclipse-ui-workbench-PRIMARY_COLOR {
@@ -45,10 +41,10 @@ ColorDefinition#org-eclipse-ui-workbench-PRIMARY_COLOR {
 }
 
 /* TODO: Remove, not being used anywhere */
-ColorDefinition#org-eclipse-ui-workbench-PRIMARY_COLOR_DULL {
+ColorDefinition#com-aobuchow-themes-moderndark-BASE_COLOR {
   color: #800000;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_START");
+  category: "#com-aobuchow-themes-moderndark-themeCategory";
+  label: "Base Color";
 }
 
 ColorDefinition#org-eclipse-ui-workbench-SECONDARY_COLOR {
@@ -57,17 +53,16 @@ ColorDefinition#org-eclipse-ui-workbench-SECONDARY_COLOR {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_START");
 }
 
+ColorDefinition#com-aobuchow-themes-moderndark-BACKGROUND_COLOR {
+  color: #17171b;
+  category: "#com-aobuchow-themes-moderndark-themeCategory";
+  label: "Background Color";
+}
+
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START {
   color: #2c2c30;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_START");
-}
-
-/* TODO: remove, only being used in platform themes */
-ColorDefinition#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END {
-  color: #2c2c30;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_UNSELECTED_TABS_COLOR_END");
 }
 
 /* TODO: should be linked as the background color? */
@@ -95,12 +90,6 @@ ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_INNER_KEYLINE_COLOR");
 }
 
-/* TODO: remove, only being used in platform themes */
-ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR {
-  color: #800000;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_OUTLINE_COLOR");
-}
 
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR {
   color: #bbbbbb;
@@ -108,7 +97,6 @@ ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_UNSELECTED_TEXT_COLOR");
 }
 
-/* TODO: remove, only being used in platform themes */
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR {
   color: #ffffff;
   category: "#org-eclipse-ui-presentation-default";
@@ -129,13 +117,6 @@ ColorDefinition#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_END {
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_UNSELECTED_TABS_COLOR_END");
 }
 
-/* TODO: remove, only being used in platform themes */
-ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_START {
-  color: #d70000;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_BG_START");
-}
-
 /* TODO: redundant (new preference for an already-used color) */
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END {
   color: #d70000;
@@ -153,13 +134,6 @@ ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_INNER_KEYLINE_COLOR {
   color: #484848;
   category: "#org-eclipse-ui-presentation-default";
   label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_INNER_KEYLINE_COLOR");
-}
-
-/* TODO: remove, only being used in platform themes */
-ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR {
-  color: #d70000;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_OUTLINE_COLOR");
 }
 
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR {
