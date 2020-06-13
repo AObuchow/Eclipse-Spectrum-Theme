@@ -47,7 +47,7 @@ CTabItem:selected CLabel {
 Tree, Table {
 	color: white;
 	swt-header-color: white;
- 	swt-header-background-color: #2c2c30; /* TODO: a color preference for the header colors should be defined */
+ 	swt-header-background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
 	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
 	swt-selection-foreground-color: black;
 	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
@@ -71,7 +71,7 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 }
 
 .MPartStack.active Table {
-    background-color: 'ColorDefinition#org-eclipse-ui-workbench-SECONDARY_COLOR';
+    background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
     color: #CCC;
 }
 .View {
@@ -91,7 +91,6 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
-/* hack: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR' should be set as a type of secondary color probably */
 .MPartStack.active .MPart Hyperlink,
 .MPartStack.active .MPart ImageHyperlink {
     background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
@@ -228,7 +227,7 @@ ScrolledComposite > Composite > Composite > Composite > List,
 Shell > Composite > Composite > Composite > Composite > Composite > List,
 Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][style~='SWT.SHADOW_ETCHED_OUT'][style~='SWT.RESIZE'][style~='SWT.MENU'][style~='SWT.FULL_SELECTION'][style~='SWT.DATE'] > Composite > List,
 Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][style~='SWT.SHADOW_ETCHED_OUT'][style~='SWT.RESIZE'][style~='SWT.MENU'][style~='SWT.FULL_SELECTION'][style~='SWT.DATE'] > Composite > * > List {
-    background-color:#0F0F12; /* TODO: This should be SECONDARY_COLOR_DULL */
+    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR'; /* TODO: This should be SECONDARY_COLOR_DULL */
     color:white;
 }
 

@@ -12,17 +12,17 @@
 
 CTabFolder {
     swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
-    swt-selected-tab-fill: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START' '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END' 100% 100%; /* title background for selected tab */
-    swt-unselected-tabs-color: '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START' '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END' 100% 100%; /* title background for unselected tab */
-    swt-outer-keyline-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_OUTER_KEYLINE_COLOR'; /* border color for whole tabs container */
-    swt-inner-keyline-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR';
+    swt-selected-tab-fill: '#com-aobuchow-themes-moderndark-BASE_COLOR' '#com-aobuchow-themes-moderndark-BASE_COLOR' 100% 100%; /* title background for selected tab */
+    swt-unselected-tabs-color: '#com-aobuchow-themes-moderndark-BASE_COLOR' '#com-aobuchow-themes-moderndark-BASE_COLOR' 100% 100%; /* title background for unselected tab */
+    swt-outer-keyline-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* border color for whole tabs container */
+    swt-inner-keyline-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
  	swt-tab-outline: #0f1114;
     padding: 2px 2px;
     swt-shadow-visible: false;
     swt-mru-visible: true;
 	swt-simple: true;
     swt-corner-radius: 0px;
-    swt-unselected-hot-tab-color-background: #161616; /* Bug 465711 */
+    swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-moderndark-TAB_HOVER_COLOR'; /* Bug 465711 */
     swt-selected-tab-highlight: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; 
 	swt-selected-highlight-top: true;
 }
@@ -31,8 +31,8 @@ CTabFolder {
 CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
     /* Set the styles for the bottom inner tabs (Bug 430051): */
     swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
-    swt-unselected-hot-tab-color-background: #161616; /* Bug 465711 */
- 	swt-selected-tab-fill: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START' '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END' 100% 100%; /* title background for selected tab */
+    swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-moderndark-TAB_HOVER_COLOR'; /* Bug 465711 */
+ 	swt-selected-tab-fill: '#com-aobuchow-themes-moderndark-BASE_COLOR' '#com-aobuchow-themes-moderndark-BASE_COLOR' 100% 100%; /* title background for selected tab */
     swt-selected-tab-highlight: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; 
 	swt-selected-highlight-top: false;
 }
@@ -40,14 +40,14 @@ CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
 
 .MPartStack.active {
     swt-selected-tab-fill: '#org-eclipse-ui-workbench-PRIMARY_COLOR' '#org-eclipse-ui-workbench-PRIMARY_COLOR' 100% 100%; /* title background for selected tab */
-    swt-unselected-tabs-color: '#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_START' '#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_END' 100% 100%; /* title background for unselected tab */
-    swt-outer-keyline-color: '#org-eclipse-ui-workbench-ACTIVE_TAB_OUTER_KEYLINE_COLOR'; /* border color for whole tabs container */
-    swt-inner-keyline-color: '#org-eclipse-ui-workbench-ACTIVE_TAB_INNER_KEYLINE_COLOR';
+    swt-unselected-tabs-color: '#com-aobuchow-themes-moderndark-BASE_COLOR' '#com-aobuchow-themes-moderndark-BASE_COLOR' 100% 100%; /* title background for unselected tab */
+    swt-outer-keyline-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* border color for whole tabs container */
+    swt-inner-keyline-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
     swt-tab-outline: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; /* border color for selected tab */
 }
 
 .MPartStack.empty {
-    swt-unselected-tabs-color: '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START' #4F5456 #4F5456 99% 100%; /* title background for unselected tab */
+    swt-unselected-tabs-color: '#com-aobuchow-themes-moderndark-BASE_COLOR' #4F5456 #4F5456 99% 100%; /* title background for unselected tab */
     swt-tab-outline: #535354; /* border color for selected tab */
     swt-outer-keyline-color: #17171b; /* border color for whole tabs container */
 }
@@ -57,20 +57,17 @@ CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
     background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
     color: '#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR';
 }
+
 .MPartStack.active > CTabItem:selected,
 .MPartStack.active > CTabItem:selected CLabel {
     color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
 
-
 CTabFolder > Composite#ToolbarComposite {
-  background-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START'; /* HACK for background of CTabFolder inner Toolbars */
+  background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
 }
 
 CTabFolder.MArea CTabItem, 
 CTabFolder.MArea CTabItem CLabel {
-    background-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START'; /* Disable HACK for background of CTabFolder inner Toolbars */
+    background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* Disable HACK for background of CTabFolder inner Toolbars */
 }
-
-
-
