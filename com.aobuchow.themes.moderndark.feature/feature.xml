@@ -2,7 +2,7 @@
 <feature
       id="com.aobuchow.themes.moderndark.feature"
       label="Modern Dark Theme"
-      version="1.0.6.qualifier"
+      version="1.0.7.qualifier"
       provider-name="aobuchow">
 
    <description url="https://github.com/AObuchow/Eclipse-Modern-Dark-Theme">
@@ -297,7 +297,7 @@ version(s), and exceptions or additional permissions here}.&quot;
          id="com.aobuchow.themes.moderndark"
          download-size="0"
          install-size="0"
-         version="1.0.6.qualifier"
+         version="1.0.7.qualifier"
          unpack="false"/>
 
 </feature>

@@ -4,7 +4,7 @@
 	<groupId>com.aobuchow.themes.moderndark</groupId>
 	<artifactId>releng</artifactId>
 	<name>releng</name>
-	<version>1.0.6-SNAPSHOT</version>
+	<version>1.0.7-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
