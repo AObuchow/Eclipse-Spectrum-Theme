@@ -89,9 +89,20 @@ IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-w
 		'org.eclipse.pde.genericeditor.extension.editor.color.quote=118,200,244'
 		'org.eclipse.pde.genericeditor.extension.editor.color.tag=121,171,255'
 		'org.eclipse.pde.genericeditor.extension.editor.color.text=207,212,216'
+		'org.eclipse.jdt.ui.Javadoc.backgroundColor=23,23,27'
+}
+
+IEclipsePreferences#org-eclipse-debug-ui:org-eclipse-ui-themes-modern-dark-debug-ui {
+	preferences:
+		'org.eclipse.debug.ui.Color=218,29,67'
+		'org.eclipse.debug.ui.MemoryHistoryKnownColor=233,235,237'
+		'org.eclipse.debug.ui.MemoryHistoryUnknownColor=168,177,184'
+		'org.eclipse.debug.ui.PREF_CHANGED_VALUE_BACKGROUND=145,77,111'
+		'org.eclipse.debug.ui.changedDebugElement=255,128,128'
 		'org.eclipse.debug.ui.consoleBackground=0,0,0'
 		'org.eclipse.debug.ui.outColor=255,255,255'
-		'org.eclipse.jdt.ui.Javadoc.backgroundColor=23,23,27'
+		'org.eclipse.debug.ui.errorColor=255, 0, 0'
+		'org.eclipse.debug.ui.inColor=115, 13, 90'
 }
 
 /* ############################## PDE ############################## */
@@ -151,7 +162,7 @@ swt-titlebar-color: #c7cdd1;
 
 /* MarketPlace */
 DiscoveryItem StyledText {
-    background-color: #17171b;
+    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
     color: white;
 }
 

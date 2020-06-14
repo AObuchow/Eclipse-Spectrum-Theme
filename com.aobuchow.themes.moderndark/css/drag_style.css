@@ -10,14 +10,12 @@
  *
  *******************************************************************************/
 
-/* @import url("platform:/plugin/org.eclipse.ui.themes/css/e4-dark_linux.css");*/
-/* @import url("platform:/plugin/org.eclipse.ui.themes/css/common/e4_globalstyle.css"); */
-/* @import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_globalstyle.css"); */
+/* ################################ CSS related to drag and drop ########################## */
 
-@import url("preference_styles.css");
-@import url("color_definitions.css");
-@import url("default_overrides.css");
-@import url("tabstyle.css");
-@import url("drag_style.css");
+.DragFeedback {
+    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+}
 
-
+.ModifiedDragFeedback {
+    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+}
