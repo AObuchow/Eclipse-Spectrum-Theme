@@ -31,7 +31,9 @@ This plugin adds the _Modern Dark_ theme to Eclipse IDE.
 
 Open Eclipse's preferences and navigate to General -> Appearance -> Colors and Fonts. The plugin's color & font preferences are under the Modern Dark category folder.
 
-<img title="" src="images/custom_preferences.png" alt="custom_preferences.png" width="434" data-align="center">
+<p align="center">
+<img title="" src="images/custom_preferences.png" alt="Modern dark color preferences" width="434">
+</p>
 
 ## Plugin Installation
 
