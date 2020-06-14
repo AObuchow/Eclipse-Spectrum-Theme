@@ -1,15 +1,40 @@
 # Eclipse-Modern-Dark-Theme
 
-Plugin which adds the "Modern Dark" theme to Eclipse.
+This plugin adds the _Modern Dark_ theme to Eclipse IDE.
+
+## Features
+
+- Gives Eclipse a clean visual overhaul
+
+- Allows Eclipses' Project Explorer font to be set.
+
+- Provides customization options for the colors used in the theme 
 
 ## How it looks
 
-![image](how_it_looks.png?raw=true "Screenshot of the Modern Dark Theme")
+![How it looks](images/how_it_looks.png)
 
-![image](how_it_looks_form_editor.png?raw=true "Screenshot of the Modern Dark Theme with a form editor open")
+![How it looks (form editor)](images/how_it_looks_form_editor.png)
 
-Screenshots taken on Linux using with [Abrus-dark](https://github.com/vinceliuice/Abrus-gtk-theme) GTK theme.
+**Note:** The above screenshots were taken on Linux using with [Abrus-dark](https://github.com/vinceliuice/Abrus-gtk-theme) GTK theme.
 
-## Update Site
+
+### Color customization examples
+
+![Custom colors 1](images/custom_colors_1.png)
+
+![Custom colors 2](images/custom_colors_2.png)
+
+![Custom colors 3](images/custom_colors_3.png)
+
+#### How to customize the theme's color & font preferences
+
+Open Eclipse's preferences and navigate to General -> Appearance -> Colors and Fonts. The plugin's color & font preferences are under the Modern Dark category folder.
+
+<img title="" src="images/custom_preferences.png" alt="custom_preferences.png" width="434" data-align="center">
+
+## Plugin Installation
+
+### Update Site
 
 `https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/updatesite/`
