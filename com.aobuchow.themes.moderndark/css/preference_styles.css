@@ -166,6 +166,11 @@ DiscoveryItem StyledText {
     color: white;
 }
 
+DiscoveryItem {
+    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    color: white;
+}
+
 
 
 /* Taken mainly from the Dim theme */
