@@ -1,0 +1,45 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Deploy P2 Updatesite
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.11
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - name: Replace Updatesite
+      run: |
+        rm -r updatesite
+        git config --local user.name "GitHub Action"
+        git config user.email "github-action@users.noreply.github.com"
+        git checkout -B updatesite
+        git rm -r updatesite/
+        mkdir updatesite
+        cd releng-updatesite/target
+        mv  -v repository/* ../../updatesite/
+        cd ..
+        cd ..
+        git add updatesite/
+    - name: Commit new Updatesite
+      run: |
+        git commit -m "deploy new updatesite"
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        branch: updatesite
+        force: true
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
