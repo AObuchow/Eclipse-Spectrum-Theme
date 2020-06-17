@@ -52,10 +52,11 @@ CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
     swt-outer-keyline-color: #17171b; /* border color for whole tabs container */
 }
 
+
 .MPartStack.active > CTabItem,
 .MPartStack.active > CTabItem CLabel {
     background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
-    color: '#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR';
+    color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
 
 .MPartStack.active > CTabItem:selected,
@@ -70,4 +71,10 @@ CTabFolder > Composite#ToolbarComposite {
 CTabFolder.MArea CTabItem, 
 CTabFolder.MArea CTabItem CLabel {
     background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* Disable HACK for background of CTabFolder inner Toolbars */
+}
+
+CTabItem,
+CTabItem CLabel {
+    background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
+    color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
