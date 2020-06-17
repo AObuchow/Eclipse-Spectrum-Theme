@@ -39,4 +39,4 @@ Open Eclipse's preferences and navigate to General -> Appearance -> Colors and F
 
 ### Update Site
 
-`https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/master/updatesite/`
+`https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/updatesite/updatesite/`
