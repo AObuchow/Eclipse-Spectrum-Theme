@@ -68,6 +68,10 @@ CTabFolder > Composite#ToolbarComposite {
   background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
 }
 
+CTabFolder.active > Composite#ToolbarComposite {
+  background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; /* Required when resizing a view with a toolbar that is active */
+}
+
 CTabFolder.MArea CTabItem, 
 CTabFolder.MArea CTabItem CLabel {
     background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* Disable HACK for background of CTabFolder inner Toolbars */
