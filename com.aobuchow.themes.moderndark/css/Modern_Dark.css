@@ -14,8 +14,8 @@
 /* @import url("platform:/plugin/org.eclipse.ui.themes/css/common/e4_globalstyle.css"); */
 /* @import url("platform:/plugin/org.eclipse.ui.themes/css/dark/e4-dark_globalstyle.css"); */
 
-@import url("preference_styles.css");
 @import url("color_definitions.css");
+@import url("preference_styles.css");
 @import url("default_overrides.css");
 @import url("tabstyle.css");
 @import url("drag_style.css");

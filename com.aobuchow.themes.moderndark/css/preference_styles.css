@@ -171,6 +171,22 @@ DiscoveryItem {
     color: white;
 }
 
+/* Found in https://git.eclipse.org/c/mpc/org.eclipse.epp.mpc.git/tree/org.eclipse.epp.mpc.ui.css/css/e4-dark_mpc.css */
+.NotificationItem,
+.NotificationItem * {
+    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+    color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+}
+
+#MarketplacePage CategoryItem,
+#MarketplacePage CategoryItem > GradientCanvas,
+#MarketplacePage CategoryItem > GradientCanvas > Label {
+    /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
+    background: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-image: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color:'#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    color: '#org-eclipse-ui-workbench-LINK_COLOR';
+}
 
 
 /* Taken mainly from the Dim theme */
