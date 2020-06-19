@@ -54,15 +54,9 @@ Tree, Table {
 	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
 }
 
-/* Views such as Project Explorer */
-.MPartStack Tree,
-.MPartStack CTabFolder Canvas{
-	/*background-color: #16181c; */
-	/* color: #FFFFD5; */ /* set the font color of the views */
-	/* swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';' disabled as these doesn't seem to work anymore 
-	swt-selection-foreground-color: black;
-	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';*/
+/* not coloring tree's out of personal preference */
+ComboShell Table, Shell List {
+	background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
 }
 
 /* Project Explorer */
@@ -203,6 +197,11 @@ Section {
 	tb-toggle-color: #7DFFCF;
 }
 
+.MPart Section > Label {
+    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    color: white;
+}
+
 ExpandableComposite {
 	background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
     swt-titlebar-color: '#org-eclipse-ui-workbench-LINK_COLOR';
@@ -247,6 +246,7 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
     color: white;
 }
 
+
 /* ############################## Global Styles ############################## */
 
 .MPart Composite,
@@ -280,7 +280,7 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
 
 Shell,
 Composite, ScrolledComposite, ExpandableComposite, Canvas, TabFolder, CLabel, Label,
-CoolBar, Sash, Group, RefactoringLocationControl, ChangeParametersControl, Link, FilteredTree,
+CoolBar, Sash, SashForm, Group, RefactoringLocationControl, ChangeParametersControl, Link, FilteredTree,
 ProxyEntriesComposite, NonProxyHostsComposite, DelayedFilterCheckboxTree,
 Splitter, ScrolledPageContent, ViewForm, LaunchConfigurationFilteredTree,
 ContainerSelectionGroup, BrowseCatalogItem, EncodingSettings,
@@ -298,6 +298,24 @@ Group > StyledText {
     color:#eeeeee;
 }
 
+Composite > StyledText,
+Shell [style~='SWT.DROP_DOWN'] > StyledText, /* for eg. folded code popup (but it's ignored) */
+SashForm > StyledText {
+	/*	Fix StyledText inside a SashForm */
+    background-color:'#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    color:#eeeeee;
+}
+
+.MPart Table,
+.MPart Browser,
+.Mpart OleFrame,
+.MPart ViewForm,
+.MPart ViewForm > CLabel,
+.MPart PageBook > Label,
+.MPart PageBook > SashForm {
+    background-color: #161616; /* hard coded since color definitions dont seem to work here? */
+    color: #CCC;
+}
 
 /* Toolbar should inherit the colors of its container to avoid drawing artifacts*/
 ToolBar {

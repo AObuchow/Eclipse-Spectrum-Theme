@@ -77,6 +77,10 @@ CTabFolder.MArea CTabItem CLabel {
     background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* Disable HACK for background of CTabFolder inner Toolbars */
 }
 
+CTabFolder Scale {
+    background-color: inherit;
+}
+
 CTabItem,
 CTabItem CLabel {
     background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
