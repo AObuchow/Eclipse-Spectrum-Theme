@@ -1,4 +1,4 @@
-# Eclipse-Modern-Dark-Theme
+# Eclipse Modern Dark Theme
 
 This plugin adds the _Modern Dark_ theme to Eclipse IDE.
 
