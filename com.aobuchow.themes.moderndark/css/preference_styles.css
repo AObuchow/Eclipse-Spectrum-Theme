@@ -90,6 +90,7 @@ IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-w
 		'org.eclipse.pde.genericeditor.extension.editor.color.tag=121,171,255'
 		'org.eclipse.pde.genericeditor.extension.editor.color.text=207,212,216'
 		'org.eclipse.jdt.ui.Javadoc.backgroundColor=23,23,27'
+		'org.eclipse.jdt.ui.Javadoc.foregroundColor=255,255,255'
 }
 
 IEclipsePreferences#org-eclipse-debug-ui:org-eclipse-ui-themes-modern-dark-debug-ui {
