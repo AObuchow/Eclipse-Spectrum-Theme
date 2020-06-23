@@ -272,6 +272,8 @@ IEclipsePreferences#org-eclipse-jdt-ui:org-eclipse-ui-themes-modern-dark-jdt { /
 IEclipsePreferences#org-python-pydev:org-eclipse-ui-themes-modern-dark-pydev {
 	preferences:
 		'STRING_COLOR=234,226,186'
+		'UNICODE_COLOR=23,198,163'
+		'DOCSTRING_MARKUP_COLOR=30,120,155'
 		'NUMBER_STYLE=0'
 		'COMMENT_COLOR=125,140,147'
 		'EDITOR_MATCHING_BRACKETS_COLOR=218,218,218'
