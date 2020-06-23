@@ -105,6 +105,14 @@ IEclipsePreferences#org-eclipse-debug-ui:org-eclipse-ui-themes-modern-dark-debug
 		'org.eclipse.debug.ui.errorColor=255,0,0'
 		'org.eclipse.debug.ui.inColor=115,13,90'
 }
+/* ############################## Eclemma ############################## */
+
+IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes-modern-dark-eclemma {
+	preferences:
+		'fullcoverage_color=6,74,6'
+		'partialcoverage_color=98,98,0'
+		'nocoverage_color=98,5,5'
+}
 
 /* ############################## PDE ############################## */
 
