@@ -4,9 +4,9 @@
    <extension
          point="org.eclipse.e4.ui.css.swt.theme">
       <theme
-            basestylesheeturi="css/Modern_Dark.css"
+            basestylesheeturi="css/Spectrum.css"
             id="modern.dark.theme.id"
-            label="Modern Dark">
+            label="Spectrum">
       </theme>
    </extension>
    <extension
@@ -21,7 +21,7 @@
       </fontDefinition>
       <themeElementCategory
             id="com.aobuchow.themes.moderndark.themeCategory"
-            label="Modern Dark">
+            label="Spectrum">
       </themeElementCategory>
       <colorDefinition
             categoryId="com.aobuchow.themes.moderndark.themeCategory"
@@ -34,7 +34,7 @@
                value="215, 0, 0">
          </colorValue>
          <description>
-            The accent color used in the Modern Dark theme.
+            The accent color used in Spectrum theme.
          </description>
       </colorDefinition>
    </extension>

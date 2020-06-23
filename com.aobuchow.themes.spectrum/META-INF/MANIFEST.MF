@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Modern Dark Theme
-Bundle-SymbolicName: com.aobuchow.themes.moderndark;singleton:=true
-Bundle-Version: 1.0.7.qualifier
+Bundle-Name: Spectrum Theme
+Bundle-SymbolicName: com.aobuchow.themes.spectrum;singleton:=true
+Bundle-Version: 0.0.1.qualifier
 Bundle-Vendor: aobuchow
-Automatic-Module-Name: Modern_Dark_Theme
+Automatic-Module-Name: Spectrum_Theme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.e4.ui.css.swt.theme,
  org.eclipse.ui
