@@ -260,3 +260,33 @@ IEclipsePreferences#org-eclipse-jdt-ui:org-eclipse-ui-themes-modern-dark-jdt { /
 		'semanticHighlighting.typeParameter.enabled=true'
 		'sourceHoverBackgroundColor=255,255,255'
 }
+
+IEclipsePreferences#org-python-pydev:org-eclipse-ui-themes-modern-dark-pydev {
+	preferences:
+		'STRING_COLOR=234,226,186'
+		'NUMBER_STYLE=0'
+		'COMMENT_COLOR=125,140,147'
+		'EDITOR_MATCHING_BRACKETS_COLOR=218,218,218'
+		'FUNC_NAME_COLOR=218,218,218'
+		'OPERATORS_COLOR=216,216,216'
+		'SELF_COLOR=192,192,192'
+		'PARENS_COLOR=216,216,216'
+		'CLASS_NAME_STYLE=0'
+		'CODE_COLOR=192,192,192'
+		'PARENS_STYLE=0'
+		'KEYWORD_COLOR=53,221,215'
+		'STRING_STYLE=0'
+		'EDITOR_MATCHING_BRACKETS_STYLE=0'
+		'CLASS_NAME_COLOR=218,218,218'
+		'BACKQUOTES_STYLE=0'
+		'NUMBER_COLOR=199,141,155'
+		'OPERATORS_STYLE=0'
+		'BACKQUOTES_COLOR=192,192,192'
+		'DECORATOR_COLOR=192,192,192'
+		'KEYWORD_STYLE=0'
+		'FUNC_NAME_STYLE=0'
+		'DECORATOR_STYLE=0'
+		'CODE_STYLE=0'
+		'SELF_STYLE=0'
+		'COMMENT_STYLE=0'
+}
