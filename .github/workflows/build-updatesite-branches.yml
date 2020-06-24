@@ -1,0 +1,39 @@
+# This workflow builds the plugin, feature and update site and pushes the update
+# site to a dedicated branch on the Github repo.
+
+name: Build Branch
+
+on:
+  push:
+    branches:
+      - /refs/heads/*
+      - !master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Fetch branch name
+        run: 
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: fetch_branch
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+      - name: Push Updatesite
+        uses: ingomohr/push-p2-repo-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-p2-repo-created-by-maven: 'releng-updatesite/target'
+          path-to-p2-repo-target: 'updatesite'
+          commit-message: 'add new updatesite'
+          target-branch-name: builds-${{ steps.fetch_branch.outputs.branch }}
+
+

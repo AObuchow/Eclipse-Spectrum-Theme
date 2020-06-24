@@ -1,0 +1,34 @@
+# This workflow builds the plugin, feature and update site and pushes the update
+# site to a dedicated branch called "updatesite" on the Github repo.
+
+name: Build Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+      - name: Push Updatesite
+        uses: ingomohr/push-p2-repo-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-p2-repo-created-by-maven: 'releng-updatesite/target'
+          path-to-p2-repo-target: 'updatesite'
+          commit-message: 'add new updatesite'
+          target-branch-name: 'updatesite'
+
+
