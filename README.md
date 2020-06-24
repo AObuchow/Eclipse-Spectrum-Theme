@@ -7,7 +7,7 @@ clean visual overhaul that can be customized to your liking.
 
 ## Plugin Features:
 
-- **Spectrum Theme ✨**: a clean & flat visual overhaul to Eclipse IDE
+- **Spectrum Theme ✨:** a clean & flat visual overhaul to Eclipse IDE
 - **Customizable theme colors 🌈:** show your *style* by changing the colors 
   used in Spectrum Theme. Associate different color schemes on a 
   per-workspace basis.
