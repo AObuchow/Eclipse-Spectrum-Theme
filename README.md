@@ -1,6 +1,6 @@
 # Eclipse Spectrum Theme 🌌✨
 
-Give Eclipse a *fresh* new look with **Spectrum Theme**. 
+Give Eclipse 4.16+ a *fresh* new look with **Spectrum Theme**. 
 
 This free and open-source theme plugin enhances your Eclipse IDE experience with a
 clean visual overhaul that can be customized to your liking.
@@ -8,7 +8,7 @@ clean visual overhaul that can be customized to your liking.
 ## Plugin Features:
 
 - **Spectrum Theme ✨:** a clean & flat visual overhaul to Eclipse IDE
-- **Customizable theme colors 🌈:** show your *style* by changing the colors 
+- **Customizable theme colors 🌈:** show *your style* by changing the colors 
   used in Spectrum Theme. Associate different color schemes on a 
   per-workspace basis.
 - **Customizable Project Explorer font 👀:** change the size & font of the Project Explorer in Eclipse IDE
