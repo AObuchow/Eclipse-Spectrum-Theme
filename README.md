@@ -39,6 +39,13 @@ Open Eclipse's preferences and navigate to General >> Appearance >> Colors and F
 
 ## 📥 Installation
 
+Available via Eclipse Marketplace or update site. 
+
+### Marketplace link
+Drag the icon below to your running Eclipse workspace
+
+[![Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=5153201 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client")
+
 ### Update Site
 
 `https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/`
