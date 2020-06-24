@@ -1,16 +1,19 @@
-# Eclipse Modern Dark Theme
+# Eclipse Spectrum Theme 🌌✨
 
-This plugin adds the _Modern Dark_ theme to Eclipse IDE.
+Give Eclipse a *fresh* new look with **Spectrum Theme**. 
 
-## Features
+This free and open-source theme plugin enhances your Eclipse IDE experience with a
+clean visual overhaul that can be customized to your liking.
 
-- Gives Eclipse a clean visual overhaul
+## Plugin Features:
 
-- Allows Eclipse's Project Explorer font to be set.
+- **Spectrum Theme ✨**: a clean & flat visual overhaul to Eclipse IDE
+- **Customizable theme colors 🌈:** show your *style* by changing the colors 
+  used in Spectrum Theme. Associate different color schemes on a 
+  per-workspace basis.
+- **Customizable Project Explorer font 👀:** change the size & font of the Project Explorer in Eclipse IDE
 
-- Provides customization options for the colors used in the theme 
-
-## How it looks
+## 📸 Screenshots
 
 ![How it looks](images/how_it_looks.png)
 
@@ -18,8 +21,7 @@ This plugin adds the _Modern Dark_ theme to Eclipse IDE.
 
 **Note:** The above screenshots were taken on Linux using with [Abrus-dark](https://github.com/vinceliuice/Abrus-gtk-theme) GTK theme.
 
-
-### Color customization examples
+### 🎨 Color customization examples
 
 ![Custom colors 1](images/custom_colors_1.png)
 
@@ -27,16 +29,22 @@ This plugin adds the _Modern Dark_ theme to Eclipse IDE.
 
 ![Custom colors 3](images/custom_colors_3.png)
 
-#### How to customize the theme's color & font preferences
+#### How to customize Spectrum Theme's color & font preferences
 
-Open Eclipse's preferences and navigate to General -> Appearance -> Colors and Fonts. The plugin's color & font preferences are under the Modern Dark category folder.
+Open Eclipse's preferences and navigate to General >> Appearance >> Colors and Fonts. The plugin's color & font preferences are under the Spectrum category folder.
 
 <p align="center">
 <img title="" src="images/custom_preferences.png" alt="Modern dark color preferences" width="434">
 </p>
 
-## Plugin Installation
+## 📥 Installation
 
 ### Update Site
 
-`https://raw.githubusercontent.com/AObuchow/Eclipse-Modern-Dark-Theme/updatesite/updatesite/`
+`https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/`
+
+## Planned features:
+
+- 💾 Saving user color schemes to CSS, which can be easily shared 
+
+- 🔮 Dynamically generated color schemes (from user-selected colors or randomly)
