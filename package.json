@@ -1,0 +1,22 @@
+{
+  "name": "eclipse-spectrum-theme-dev",
+  "version": "1.0.0",
+  "description": "Development utilities for Eclipse Spectrum Theme",
+  "main": "index.js",
+  "scripts": {
+    "format": "./node_modules/prettier/bin-prettier.js --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AObuchow/Eclipse-Spectrum-Theme.git"
+  },
+  "author": "AObuchow",
+  "license": "SEE LICENSE IN https://github.com/AObuchow/Eclipse-Spectrum-Theme/blob/master/LICENSE",
+  "bugs": {
+    "url": "https://github.com/AObuchow/Eclipse-Spectrum-Theme/issues"
+  },
+  "homepage": "https://github.com/AObuchow/Eclipse-Spectrum-Theme#readme",
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
+}

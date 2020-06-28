@@ -1,0 +1,6 @@
+/node_modules/
+README.MD
+.github/workflows/
+com.aobuchow.themes.spectrum/bin/
+package.json
+package-lock.json

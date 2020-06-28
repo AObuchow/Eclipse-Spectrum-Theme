@@ -1,4 +1,6 @@
-/.metadata/
+# Node
+/node_modules/
+package
 # Maven
 /target/
 /com.aobuchow.themes.spectrum/target/
@@ -7,5 +9,6 @@
 /bin/
 # Eclipse Core      
 /.settings/
+/.metadata/
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath

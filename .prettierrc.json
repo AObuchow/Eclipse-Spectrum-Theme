@@ -1,0 +1,12 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "com.aobuchow.themes.spectrum/css/preference_styles.css",
+      "options": {
+        "printWidth": 50
+      }
+    }
+  ]
+}

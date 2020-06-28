@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Prettify all selected files
+ ./node_modules/.bin/prettier --write .
+
+# Add back the modified/prettified files to staging
+git add .
+
+exit 0
