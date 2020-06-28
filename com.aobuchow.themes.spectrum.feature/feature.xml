@@ -2,7 +2,7 @@
 <feature
       id="com.aobuchow.themes.spectrum.feature"
       label="%featureName"
-      version="0.0.1.qualifier"
+      version="1.0.0.qualifier"
       provider-name="aobuchow"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">

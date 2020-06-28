@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Spectrum Theme
 Bundle-SymbolicName: com.aobuchow.themes.spectrum;singleton:=true
-Bundle-Version: 0.0.1.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: aobuchow
 Automatic-Module-Name: Spectrum_Theme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
