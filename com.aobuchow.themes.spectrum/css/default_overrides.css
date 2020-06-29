@@ -11,7 +11,7 @@
  *******************************************************************************/
 
 #org-eclipse-e4-ui-compatibility-editor CTabItem:selected {
-    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
     font-weight: bold;
 }
 
@@ -20,7 +20,7 @@
 
 CTabItem,
 CTabItem CLabel {
-   /*  background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR'; HACK for background of CTabFolder inner Toolbars */
+   /*  background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; HACK for background of CTabFolder inner Toolbars */
     color: '#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR';
 }
 CTabItem:selected,
@@ -30,7 +30,7 @@ CTabItem:selected CLabel {
 
 .MPartStack.active > CTabItem,
 .MPartStack.active > CTabItem CLabel {
-   /* background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';  HACK for background of CTabFolder inner Toolbars */
+   /* background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';  HACK for background of CTabFolder inner Toolbars */
     color: '#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR';
 }
 .MPartStack.active > CTabItem:selected,
@@ -47,29 +47,29 @@ CTabItem:selected CLabel {
 Tree, Table {
 	color: white;
 	swt-header-color: white;
- 	swt-header-background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
-	swt-selection-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+ 	swt-header-background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
+	swt-selection-background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
 	swt-selection-foreground-color: black;
-	swt-hot-background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-	swt-hot-border-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+	swt-hot-background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
+	swt-hot-border-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
 }
 
 /* not coloring tree's out of personal preference */
-ComboShell Table, Shell List {
-	background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
+Shell Table, Shell List {
+	background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
 }
 
 /* Project Explorer */
 Composite#org-eclipse-ui-navigator-ProjectExplorer * {
-  font-family: '#com-aobuchow-themes-moderndark-font-projectExplorer';
+  font-family: '#com-aobuchow-themes-spectrum-font-projectExplorer';
 }
 
 .MPartStack.active Table {
-    background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
     color: #CCC;
 }
 .View {
-    background-color: '#com-aobuchow-themes-moderndark-BASE_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
     color: #F5F5F5;
 }
 
@@ -87,26 +87,26 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 
 .MPartStack.active .MPart Hyperlink,
 .MPartStack.active .MPart ImageHyperlink {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
 .MPart Hyperlink,
 .MPart ImageHyperLink {
-	background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+	background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 /* ################################################ */
 
 /* Color in between text editors */
 .MPartSashContainer {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: #EEEEEE;
 }
 
 /* ###################### Form Editors ########################## */
 
-/* hack: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR' should be set as a type of secondary color probably */
+/* hack: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR' should be set as a type of secondary color probably */
 
 .MPartStack.active .MPart FormHeading,
 .MPartStack.active .MPart FormHeading > TitleRegion,
@@ -114,7 +114,7 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 .MPartStack.active .MPart FormHeading > TitleRegion > StyledText,
 .MPartStack.active .MPart FormHeading LayoutComposite,
 .MPartStack.active .MPart FormHeading ImageHyperlink {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
@@ -124,7 +124,7 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 .MPart FormHeading > TitleRegion > StyledText,
 .MPart FormHeading LayoutComposite,
 .MPart FormHeading ImageHyperlink {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
@@ -134,7 +134,7 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 .MPartStack .MPart FormHeading > TitleRegion > StyledText,
 .MPartStack .MPart FormHeading LayoutComposite,
 .MPartStack .MPart FormHeading ImageHyperlink {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
@@ -142,7 +142,7 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 .MPart FormHeading > TitleRegion,
 .MPart FormHeading > TitleRegion > Label,
 .MPart FormHeading > TitleRegion > StyledText {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: 'ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
@@ -151,27 +151,27 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
     swt-background-mode: none;
 }
 .MPart FormHeading > CLabel {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: #E98787;
 }
 
 Form,
 FormHeading {
-    background:   '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-    background-color:  '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background:   '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+    background-color:  '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: 'ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
 Form {
 	/* Bug 465148: Additional styling for the Form */
-    text-background-color:  '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    text-background-color:  '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 
-	tb-toggle-hover-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	tb-toggle-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	h-hover-full-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	h-hover-light-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	h-bottom-keyline-2-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	h-bottom-keyline-1-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+	tb-toggle-hover-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	tb-toggle-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	h-hover-full-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	h-hover-light-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	h-bottom-keyline-2-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	h-bottom-keyline-1-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 
 	/* We also have to force the background mode (the
 	 * Label/ToolBar in the heading should inherit it).
@@ -180,30 +180,30 @@ Form {
 }
 
 TabbedPropertyTitle {
-	swt-backgroundGradientStart-color:  '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	swt-backgroundGradientEnd-color:    '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	swt-backgroundBottomKeyline1-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-	swt-backgroundBottomKeyline2-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+	swt-backgroundGradientStart-color:  '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	swt-backgroundGradientEnd-color:    '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	swt-backgroundBottomKeyline1-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	swt-backgroundBottomKeyline2-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 }
 
 Section {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: '#org-eclipse-ui-workbench-LINK_COLOR';
-    background-color-titlebar: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-    background-color-gradient-titlebar: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-    border-color-titlebar: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color-titlebar: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+    background-color-gradient-titlebar: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+    border-color-titlebar: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 	swt-titlebar-color: '#org-eclipse-ui-workbench-LINK_COLOR';
 	tb-toggle-hover-color: #7DFFCF;
 	tb-toggle-color: #7DFFCF;
 }
 
 .MPart Section > Label {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: white;
 }
 
 ExpandableComposite {
-	background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+	background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     swt-titlebar-color: '#org-eclipse-ui-workbench-LINK_COLOR';
 	tb-toggle-hover-color: #7DFFCF;
 	tb-toggle-color: #7DFFCF;
@@ -226,13 +226,13 @@ ScrolledComposite > Composite > Composite > Composite > List,
 Shell > Composite > Composite > Composite > Composite > Composite > List,
 Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][style~='SWT.SHADOW_ETCHED_OUT'][style~='SWT.RESIZE'][style~='SWT.MENU'][style~='SWT.FULL_SELECTION'][style~='SWT.DATE'] > Composite > List,
 Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][style~='SWT.SHADOW_ETCHED_OUT'][style~='SWT.RESIZE'][style~='SWT.MENU'][style~='SWT.FULL_SELECTION'][style~='SWT.DATE'] > Composite > * > List {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR'; /* TODO: This should be SECONDARY_COLOR_DULL */
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR'; /* TODO: This should be SECONDARY_COLOR_DULL */
     color:white;
 }
 
 #org-eclipse-ui-main-toolbar, #PerspectiveSwitcher {
-    eclipse-perspective-keyline-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR' '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR' 100%;
+    eclipse-perspective-keyline-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR' '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR' 100%;
     handle-image: none;
     color: #EBE8E4;
 }
@@ -274,7 +274,7 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
 .Mpart ScrolledComposite ProgressInfoItem,
 .MPart Form ScrolledPageBook,
 .MPart DependenciesComposite > SashForm > Section > * { /* Section > DependenciesComposite$... */
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color:#eeeeee;
 }
 
@@ -294,7 +294,7 @@ Button ,
 Composite > *,
 Composite > * > *,
 Group > StyledText {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color:#eeeeee;
 }
 
@@ -302,7 +302,7 @@ Composite > StyledText,
 Shell [style~='SWT.DROP_DOWN'] > StyledText, /* for eg. folded code popup (but it's ignored) */
 SashForm > StyledText {
 	/*	Fix StyledText inside a SashForm */
-    background-color:'#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color:'#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color:#eeeeee;
 }
 
@@ -323,6 +323,6 @@ ToolBar {
 }
 
 ProgressIndicator {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: #eeeeee;
 }

@@ -5,38 +5,24 @@
          point="org.eclipse.e4.ui.css.swt.theme">
       <theme
             basestylesheeturi="css/Spectrum.css"
-            id="modern.dark.theme.id"
+            id="spectrum.theme.id"
             label="Spectrum">
       </theme>
    </extension>
    <extension
          point="org.eclipse.ui.themes">
       <fontDefinition
-            categoryId="com.aobuchow.themes.moderndark.themeCategory"
-            id="com.aobuchow.themes.moderndark.font.projectExplorer"
+            categoryId="com.aobuchow.themes.spectrum.themeCategory"
+            id="com.aobuchow.themes.spectrum.font.projectExplorer"
             label="Project Explorer">
          <description>
             The font used by the Project Explorer
          </description>
       </fontDefinition>
       <themeElementCategory
-            id="com.aobuchow.themes.moderndark.themeCategory"
+            id="com.aobuchow.themes.spectrum.themeCategory"
             label="Spectrum">
       </themeElementCategory>
-      <colorDefinition
-            categoryId="com.aobuchow.themes.moderndark.themeCategory"
-            defaultsTo="215, 0, 0"
-            id="org.eclipse.ui.workbench.PRIMARY_COLOR "
-            isEditable="true"
-            label="Accent Color"
-            value="215, 0, 0">
-         <colorValue
-               value="215, 0, 0">
-         </colorValue>
-         <description>
-            The accent color used in Spectrum theme.
-         </description>
-      </colorDefinition>
    </extension>
 
 </plugin>

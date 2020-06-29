@@ -14,9 +14,9 @@
 /* ################################ CSS related to drag and drop ########################## */
 
 .DragFeedback {
-    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
 }
 
 .ModifiedDragFeedback {
-    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
 }

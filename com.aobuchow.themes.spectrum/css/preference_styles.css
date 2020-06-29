@@ -12,7 +12,7 @@
 
 /* ############################## Eclipse UI properties ############################## */
 
-IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes-modern-dark-editors { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
+IEclipsePreferences#org-eclipse-ui-editors:com-aobuchow-themes-spectrum-editors { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
 	preferences:
 		'AbstractTextEditor.Color.SelectionForeground.SystemDefault=false'
 		'AbstractTextEditor.Color.SelectionBackground.SystemDefault=false'
@@ -51,7 +51,7 @@ IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes-modern-dark-edi
 		'writeOccurrenceIndicationColor=97,97,97'
 }
 
-IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-workbench { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
+IEclipsePreferences#org-eclipse-ui-workbench:com-aobuchow-themes-spectrum-workbench { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
 	preferences:
 		'ACTIVE_HYPERLINK_COLOR=40,235,195'
 		'CONTENT_ASSIST_BACKGROUND_COLOR=52,57,61'
@@ -93,7 +93,7 @@ IEclipsePreferences#org-eclipse-ui-workbench:org-eclipse-ui-themes-modern-dark-w
 		'org.eclipse.jdt.ui.Javadoc.foregroundColor=255,255,255'
 }
 
-IEclipsePreferences#org-eclipse-debug-ui:org-eclipse-ui-themes-modern-dark-debug-ui {
+IEclipsePreferences#org-eclipse-debug-ui:com-aobuchow-themes-spectrum-debug-ui {
 	preferences:
 		'org.eclipse.debug.ui.Color=218,29,67'
 		'org.eclipse.debug.ui.MemoryHistoryKnownColor=233,235,237'
@@ -107,7 +107,7 @@ IEclipsePreferences#org-eclipse-debug-ui:org-eclipse-ui-themes-modern-dark-debug
 }
 /* ############################## Eclemma ############################## */
 
-IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes-modern-dark-eclemma {
+IEclipsePreferences#org-eclipse-ui-editors:com-aobuchow-themes-spectrum-eclemma {
 	preferences:
 		'fullcoverage_color=6,74,6'
 		'partialcoverage_color=98,98,0'
@@ -116,7 +116,7 @@ IEclipsePreferences#org-eclipse-ui-editors:org-eclipse-ui-themes-modern-dark-ecl
 
 /* ############################## PDE ############################## */
 
-IEclipsePreferences#org-eclipse-pde-ui:org-eclipse-ui-themes-modern-dark-pde {
+IEclipsePreferences#org-eclipse-pde-ui:com-aobuchow-themes-spectrum-pde {
 	preferences:
 		'editor.color.default=216,216,216'
 		'editor.color.externalized_string=255,198,0'
@@ -171,29 +171,29 @@ swt-titlebar-color: #c7cdd1;
 
 /* MarketPlace */
 DiscoveryItem StyledText {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: white;
 }
 
 DiscoveryItem {
-    background-color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: white;
 }
 
 /* Found in https://git.eclipse.org/c/mpc/org.eclipse.epp.mpc.git/tree/org.eclipse.epp.mpc.ui.css/css/e4-dark_mpc.css */
 .NotificationItem,
 .NotificationItem * {
-    background-color: '#org-eclipse-ui-workbench-PRIMARY_COLOR';
-    color: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
+    color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 }
 
 #MarketplacePage CategoryItem,
 #MarketplacePage CategoryItem > GradientCanvas,
 #MarketplacePage CategoryItem > GradientCanvas > Label {
     /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
-    background: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-    background-image: '#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
-    background-color:'#com-aobuchow-themes-moderndark-BACKGROUND_COLOR';
+    background: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+    background-image: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+    background-color:'#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
     color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
@@ -201,7 +201,7 @@ DiscoveryItem {
 /* Taken mainly from the Dim theme */
 /* see org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingsCore */
 /* see org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingManager */
-IEclipsePreferences#org-eclipse-jdt-ui:org-eclipse-ui-themes-modern-dark-jdt { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
+IEclipsePreferences#org-eclipse-jdt-ui:com-aobuchow-themes-spectrum-jdt { /* pseudo attribute added to allow contributions without replacing this node, see Bug 466075 */
 	preferences:
 		'java_bracket=218,218,218'
 		'java_comment_task_tag=165,123,97'
@@ -269,7 +269,7 @@ IEclipsePreferences#org-eclipse-jdt-ui:org-eclipse-ui-themes-modern-dark-jdt { /
 		'sourceHoverBackgroundColor=255,255,255'
 }
 
-IEclipsePreferences#org-python-pydev:org-eclipse-ui-themes-modern-dark-pydev {
+IEclipsePreferences#org-python-pydev:com-aobuchow-themes-spectrum-pydev {
 	preferences:
 		'STRING_COLOR=234,226,186'
 		'UNICODE_COLOR=23,198,163'
