@@ -5,7 +5,7 @@
          point="org.eclipse.e4.ui.css.swt.theme">
       <theme
             basestylesheeturi="css/Spectrum.css"
-            id="spectrum.theme.id"
+            id="spectrum.dark.theme.id"
             label="Spectrum">
       </theme>
    </extension>
