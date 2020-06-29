@@ -5,9 +5,10 @@ name: Build Branch
 
 on:
   push:
-    branches:
-      - /refs/heads/*
-      - !master
+    branches-ignore:
+      - master
+    tags-ignore:
+      - '**'
 
 jobs:
   build:
