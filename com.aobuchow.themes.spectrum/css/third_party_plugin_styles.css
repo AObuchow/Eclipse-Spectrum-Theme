@@ -13,58 +13,55 @@
 /* ############################## Egit ############################## */
 
 #org-eclipse-egit-ui-StagingView StyledText,
-Form Section LayoutComposite StyledText
-{
-background-color: #1c1f22;
-color: #d8dcdf;
+Form Section LayoutComposite StyledText {
+  background-color: #1c1f22;
+  color: #d8dcdf;
 }
 
 PushResultTable-SpellcheckableMessageAreaExtension StyledText {
-background-color: #2c3135;
-color: #d8dcdf;
+  background-color: #2c3135;
+  color: #d8dcdf;
 }
-
 
 /* ############################## JDT ############################## */
 
-
 /* TODO: are these 3 necessary? */
 BulletListBlock > StyledText {
-background-color: #394146;
-color: #b3bbc1;
+  background-color: #394146;
+  color: #b3bbc1;
 }
 
 FormatterPreferenceSectionComposite {
-background-color:#49535a;
-color:#ebedef;
-swt-titlebar-color: #c7cdd1;
+  background-color: #49535a;
+  color: #ebedef;
+  swt-titlebar-color: #c7cdd1;
 }
 
 /* ############################## MarketPlace ############################## */
 
 /* Found in https://git.eclipse.org/c/mpc/org.eclipse.epp.mpc.git/tree/org.eclipse.epp.mpc.ui.css/css/e4-dark_mpc.css */
 DiscoveryItem StyledText {
-    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-    color: white;
+  background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+  color: white;
 }
 
 DiscoveryItem {
-    background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-    color: white;
+  background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+  color: white;
 }
 
 .NotificationItem,
 .NotificationItem * {
-    background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
-    color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+  background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
+  color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 }
 
 #MarketplacePage CategoryItem,
 #MarketplacePage CategoryItem > GradientCanvas,
 #MarketplacePage CategoryItem > GradientCanvas > Label {
-    /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
-    background: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-    background-image: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-    background-color:'#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-    color: '#org-eclipse-ui-workbench-LINK_COLOR';
+  /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
+  background: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+  background-image: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+  background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+  color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }

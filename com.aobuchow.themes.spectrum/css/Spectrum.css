@@ -10,9 +10,9 @@
  *
  *******************************************************************************/
 
-@import url("color_definitions.css");
-@import url("preference_styles.css");
-@import url("third_party_plugin_styles.css");
-@import url("default_overrides.css");
-@import url("tabstyle.css");
-@import url("drag_style.css");
+@import url('color_definitions.css');
+@import url('preference_styles.css');
+@import url('third_party_plugin_styles.css');
+@import url('default_overrides.css');
+@import url('tabstyle.css');
+@import url('drag_style.css');

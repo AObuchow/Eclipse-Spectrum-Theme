@@ -11,79 +11,78 @@
  *******************************************************************************/
 
 ThemesExtension {
-  color-definition:
-    "#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR",
-    "#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR",
-    "#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR",
-    "#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR",
-    "#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR",
-	"#org-eclipse-ui-workbench-LINK_COLOR",
-    "#com-aobuchow-themes-spectrum-ACCENT_COLOR",
-	"#com-aobuchow-themes-spectrum-BASE_COLOR",
-	"#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR",
-	"#com-aobuchow-themes-spectrum-BACKGROUND_COLOR";
+  color-definition: '#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR',
+    '#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR',
+    '#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR',
+    '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR',
+    '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR',
+    '#org-eclipse-ui-workbench-LINK_COLOR',
+    '#com-aobuchow-themes-spectrum-ACCENT_COLOR',
+    '#com-aobuchow-themes-spectrum-BASE_COLOR',
+    '#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR',
+    '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 }
 
 ColorDefinition#com-aobuchow-themes-spectrum-ACCENT_COLOR {
   color: #d70000;
-  category: "#com-aobuchow-themes-spectrum-themeCategory";
-  label: "Accent Color";
-  description: "The accent color used in Spectrum theme.";
+  category: '#com-aobuchow-themes-spectrum-themeCategory';
+  label: 'Accent Color';
+  description: 'The accent color used in Spectrum theme.';
 }
 
 ColorDefinition#com-aobuchow-themes-spectrum-BASE_COLOR {
   color: #2f2f2f;
-  category: "#com-aobuchow-themes-spectrum-themeCategory";
-  label: "Base Color";
-  description: "The base color used in Spectrum theme.";
+  category: '#com-aobuchow-themes-spectrum-themeCategory';
+  label: 'Base Color';
+  description: 'The base color used in Spectrum theme.';
 }
 
 ColorDefinition#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR {
   color: #161616;
-  category: "#com-aobuchow-themes-spectrum-themeCategory";
-  label: "Tab Hover Color";
-  description: "The color used when an hovering on a tab in Spectrum theme.";
+  category: '#com-aobuchow-themes-spectrum-themeCategory';
+  label: 'Tab Hover Color';
+  description: 'The color used when an hovering on a tab in Spectrum theme.';
 }
 
 ColorDefinition#com-aobuchow-themes-spectrum-BACKGROUND_COLOR {
   color: #17171b;
-  category: "#com-aobuchow-themes-spectrum-themeCategory";
-  label: "Background Color";
-  description: "The background color used in Spectrum theme.";
+  category: '#com-aobuchow-themes-spectrum-themeCategory';
+  label: 'Background Color';
+  description: 'The background color used in Spectrum theme.';
 }
 
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR {
   color: #bbbbbb;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_UNSELECTED_TEXT_COLOR");
+  category: '#org-eclipse-ui-presentation-default';
+  label: url('platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_UNSELECTED_TEXT_COLOR');
 }
 
 ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR {
   color: #ffffff;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_SELECTED_TEXT_COLOR");
+  category: '#org-eclipse-ui-presentation-default';
+  label: url('platform:/plugin/org.eclipse.ui.themes?message=INACTIVE_TAB_SELECTED_TEXT_COLOR');
 }
 
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR {
   color: white;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_UNSELECTED_TEXT_COLOR");
+  category: '#org-eclipse-ui-presentation-default';
+  label: url('platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_UNSELECTED_TEXT_COLOR');
 }
 
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR {
   color: white;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_SELECTED_TEXT_COLOR");
+  category: '#org-eclipse-ui-presentation-default';
+  label: url('platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_TAB_SELECTED_TEXT_COLOR');
 }
 
 ColorDefinition#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR {
   color: #cccccc;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR");
+  category: '#org-eclipse-ui-presentation-default';
+  label: url('platform:/plugin/org.eclipse.ui.themes?message=ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR');
 }
 
 ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR {
   color: #28ebc3;
-  category: "#org-eclipse-ui-presentation-default";
-  label: url("platform:/plugin/org.eclipse.ui.themes?message=LINK_COLOR");
+  category: '#org-eclipse-ui-presentation-default';
+  label: url('platform:/plugin/org.eclipse.ui.themes?message=LINK_COLOR');
 }

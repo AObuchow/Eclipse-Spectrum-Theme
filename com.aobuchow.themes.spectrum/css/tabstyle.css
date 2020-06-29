@@ -11,57 +11,60 @@
  *******************************************************************************/
 
 CTabFolder {
-    swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
-    swt-selected-tab-fill: '#com-aobuchow-themes-spectrum-BASE_COLOR' '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for selected tab */
-    swt-unselected-tabs-color: '#com-aobuchow-themes-spectrum-BASE_COLOR' '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for unselected tab */
-    swt-outer-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* border color for whole tabs container */
-    swt-inner-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
- 	swt-tab-outline: #0f1114;
-    padding: 2px 2px;
-    swt-shadow-visible: false;
-    swt-mru-visible: true;
-	swt-simple: true;
-    swt-corner-radius: 0px;
-    swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR'; /* Bug 465711 */
-    swt-selected-tab-highlight: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; 
-	swt-selected-highlight-top: true;
+  swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
+  swt-selected-tab-fill: '#com-aobuchow-themes-spectrum-BASE_COLOR'
+    '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for selected tab */
+  swt-unselected-tabs-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'
+    '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for unselected tab */
+  swt-outer-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* border color for whole tabs container */
+  swt-inner-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
+  swt-tab-outline: #0f1114;
+  padding: 2px 2px;
+  swt-shadow-visible: false;
+  swt-mru-visible: true;
+  swt-simple: true;
+  swt-corner-radius: 0px;
+  swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR'; /* Bug 465711 */
+  swt-selected-tab-highlight: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
+  swt-selected-highlight-top: true;
 }
-
 
 CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
-    /* Set the styles for the bottom inner tabs (Bug 430051): */
-    swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
-    swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR'; /* Bug 465711 */
- 	swt-selected-tab-fill: '#com-aobuchow-themes-spectrum-BASE_COLOR' '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for selected tab */
-    swt-selected-tab-highlight: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; 
-	swt-selected-highlight-top: false;
+  /* Set the styles for the bottom inner tabs (Bug 430051): */
+  swt-tab-renderer: url('bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering');
+  swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR'; /* Bug 465711 */
+  swt-selected-tab-fill: '#com-aobuchow-themes-spectrum-BASE_COLOR'
+    '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for selected tab */
+  swt-selected-tab-highlight: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
+  swt-selected-highlight-top: false;
 }
 
-
 .MPartStack.active {
-    swt-selected-tab-fill: '#com-aobuchow-themes-spectrum-ACCENT_COLOR' '#com-aobuchow-themes-spectrum-ACCENT_COLOR' 100% 100%; /* title background for selected tab */
-    swt-unselected-tabs-color: '#com-aobuchow-themes-spectrum-BASE_COLOR' '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for unselected tab */
-    swt-outer-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* border color for whole tabs container */
-    swt-inner-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
-    swt-tab-outline: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; /* border color for selected tab */
+  swt-selected-tab-fill: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'
+    '#com-aobuchow-themes-spectrum-ACCENT_COLOR' 100% 100%; /* title background for selected tab */
+  swt-unselected-tabs-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'
+    '#com-aobuchow-themes-spectrum-BASE_COLOR' 100% 100%; /* title background for unselected tab */
+  swt-outer-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* border color for whole tabs container */
+  swt-inner-keyline-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
+  swt-tab-outline: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; /* border color for selected tab */
 }
 
 .MPartStack.empty {
-    swt-unselected-tabs-color: '#com-aobuchow-themes-spectrum-BASE_COLOR' #4F5456 #4F5456 99% 100%; /* title background for unselected tab */
-    swt-tab-outline: #535354; /* border color for selected tab */
-    swt-outer-keyline-color: #17171b; /* border color for whole tabs container */
+  swt-unselected-tabs-color: '#com-aobuchow-themes-spectrum-BASE_COLOR' #4f5456
+    #4f5456 99% 100%; /* title background for unselected tab */
+  swt-tab-outline: #535354; /* border color for selected tab */
+  swt-outer-keyline-color: #17171b; /* border color for whole tabs container */
 }
-
 
 .MPartStack.active > CTabItem,
 .MPartStack.active > CTabItem CLabel {
-    background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
-    color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
+  background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
+  color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
 
 .MPartStack.active > CTabItem:selected,
 .MPartStack.active > CTabItem:selected CLabel {
-    color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
+  color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
 
 CTabFolder > Composite#ToolbarComposite {
@@ -72,17 +75,17 @@ CTabFolder.active > Composite#ToolbarComposite {
   background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; /* Required when resizing a view with a toolbar that is active */
 }
 
-CTabFolder.MArea CTabItem, 
+CTabFolder.MArea CTabItem,
 CTabFolder.MArea CTabItem CLabel {
-    background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* Disable HACK for background of CTabFolder inner Toolbars */
+  background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* Disable HACK for background of CTabFolder inner Toolbars */
 }
 
 CTabFolder Scale {
-    background-color: inherit;
+  background-color: inherit;
 }
 
 CTabItem,
 CTabItem CLabel {
-    background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
-    color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
+  background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
+  color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
