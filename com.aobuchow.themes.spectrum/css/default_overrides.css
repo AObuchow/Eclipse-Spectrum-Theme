@@ -80,9 +80,11 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
   background-color: #313538;
   color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
+
+/* prettier-ignore */
 .MPartStack.active #org-eclipse-help-ui-HelpView LayoutComposite > LayoutComposite ImageHyperlink {
-  background-color: #333;
-  color: '#org-eclipse-ui-workbench-LINK_COLOR';
+    background-color: #333;
+	color: '#org-eclipse-ui-workbench-LINK_COLOR';
 }
 
 .MPartStack.active .MPart Hyperlink,
@@ -173,8 +175,10 @@ Form {
   h-bottom-keyline-2-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
   h-bottom-keyline-1-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
 
+  /* prettier-ignore */
   /* We also have to force the background mode (the
-   * Label/ToolBar in the heading should inherit it). */
+   * Label/ToolBar in the heading should inherit it).
+   */
   swt-background-mode: 'force';
 }
 
