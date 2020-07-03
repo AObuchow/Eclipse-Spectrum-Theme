@@ -36,8 +36,8 @@ IEclipsePreferences#org-eclipse-ui-editors:com-aobuchow-themes-spectrum-editors 
     'AbstractTextEditor.Color.Background=23,23,27'
     'AbstractTextEditor.Color.FindScope=224,226,228'
     'AbstractTextEditor.Color.Foreground=192,192,192'
-    'AbstractTextEditor.Color.SelectionBackground=117,117,117'
-    'AbstractTextEditor.Color.SelectionForeground=192,192,192'
+    'AbstractTextEditor.Color.SelectionBackground=252,233,79'
+    'AbstractTextEditor.Color.SelectionForeground=0,0,0'
     'currentLineColor=47,57,60'
     'deletionIndicationColor=224,226,228'
     'filteredSearchResultIndicationColor=97,97,97'
@@ -48,7 +48,15 @@ IEclipsePreferences#org-eclipse-ui-editors:com-aobuchow-themes-spectrum-editors 
     'PHPWriteOccurrenceIndicationColor=97,97,97'
     'printMarginColor=129,150,154'
     'searchResultIndicationColor=97,97,97'
-    'writeOccurrenceIndicationColor=97,97,97';
+    'writeOccurrenceIndicationColor=27,98,145'
+    'TextOccurrenceIndicationColor=27,98,145'
+    'matchingBracketsColor=249,250,244';
+}
+
+IEclipsePreferences#org-eclipse-ui-editors:com-aobuchow-themes-spectrum-lsp4e {
+  preferences: 'LSP4EReadOccurrenceIndicationColor=27,98,145'
+    'LSP4EWriteOccurrenceIndicationColor=27,98,145'
+    'LSP4ETextOccurrenceIndicationColor=27,98,145';
 }
 
 IEclipsePreferences#org-eclipse-ui-workbench:com-aobuchow-themes-spectrum-workbench {
