@@ -23,6 +23,50 @@
             id="com.aobuchow.themes.spectrum.themeCategory"
             label="Spectrum">
       </themeElementCategory>
+      <colorDefinition
+            id="com.aobuchow.themes.spectrum.colorDefinition1"
+            label="label">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.aobuchow.themes.spectrum.themeCategory"
+            id="com.aobuchow.themes.spectrum.ACCENT_COLOR"
+            isEditable="true"
+            label="Accent Color"
+            value="215,0,0">
+         <description>
+            The accent color used in Spectrum theme.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.aobuchow.themes.spectrum.themeCategory"
+            id="com.aobuchow.themes.spectrum.BASE_COLOR"
+            isEditable="true"
+            label="Base Color"
+            value="47,47,47">
+         <description>
+            The base color used in Spectrum theme.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.aobuchow.themes.spectrum.themeCategory"
+            id="com.aobuchow.themes.spectrum.BACKGROUND_COLOR"
+            isEditable="true"
+            label="Background Color"
+            value="23,23,27">
+         <description>
+            The background color used in Spectrum theme.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.aobuchow.themes.spectrum.themeCategory"
+            id="com.aobuchow.themes.spectrum.TAB_HOVER_COLOR"
+            isEditable="true"
+            label="Tab Hover Color"
+            value="22,22,22">
+         <description>
+            The color used when an hovering on a tab in Spectrum theme.
+         </description>
+      </colorDefinition>
    </extension>
 
 </plugin>

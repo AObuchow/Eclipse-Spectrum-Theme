@@ -90,3 +90,21 @@ CTabItem CLabel {
   background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
   color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
 }
+
+/* ###################### Below used to be in default overrides  ########################## */
+
+/* TODO: Maybe inactive tabs should have a darker color? */
+CTabItem:selected,
+CTabItem:selected CLabel {
+  color: white;
+}
+
+.MPartStack.active > CTabItem,
+.MPartStack.active > CTabItem CLabel {
+  /* background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';  HACK for background of CTabFolder inner Toolbars */
+  color: white;
+}
+
+.MPartStack.active.noFocus > CTabItem:selected {
+  color: white;
+}

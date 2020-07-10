@@ -14,6 +14,7 @@
 
 	<modules>
 		<module>com.aobuchow.themes.spectrum</module>
+		<module>com.aobuchow.themes.spectrum.preferences</module>
 		<module>com.aobuchow.themes.spectrum.feature</module>
 		<module>releng-updatesite</module>
 	</modules>
