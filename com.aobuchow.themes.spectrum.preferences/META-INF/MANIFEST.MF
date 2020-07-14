@@ -6,7 +6,10 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.aobuchow.themes.spectrum.preferences.Activator
 Bundle-Vendor: aobuchow
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.swt,
+ org.eclipse.e4.core.services
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.aobuchow.themes.spectrum.preferences
 Bundle-ActivationPolicy: lazy
+Import-Package: org.osgi.service.event;version="1.4.0"
