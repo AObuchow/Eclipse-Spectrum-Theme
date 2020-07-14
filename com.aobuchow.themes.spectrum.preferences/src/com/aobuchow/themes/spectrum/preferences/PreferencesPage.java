@@ -4,17 +4,22 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.eclipse.core.runtime.Status;
+import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.jface.preference.PreferencePage;
+import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.browser.IWebBrowser;
+import org.eclipse.ui.internal.themes.WorkbenchThemeManager;
+import org.osgi.service.event.Event;
+import org.osgi.service.event.EventHandler;
 
 public class PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
 
@@ -22,9 +27,22 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 	private URL issuesURL;
 	private URL repoURL;
 
+	private EventHandler themeRegistryRestyledHandler = new EventHandler() {
+		@Override
+		public void handleEvent(Event event) {
+			String currentColorScheme = ColorManager.getCurrentColorSchemeCSS();
+			colorScheme.setText(currentColorScheme);
+			ColorManager.setStyledTextColoring(colorScheme, Activator.getDefault().getColorRegistry());
+		}
+	};
+	private StyledText colorScheme;
+
 	@Override
 	public void init(IWorkbench workbench) {
 		browser = BrowserUtils.newBrowser();
+		IEventBroker eventBroker = workbench.getService(IEventBroker.class);
+		eventBroker.subscribe(WorkbenchThemeManager.Events.THEME_REGISTRY_RESTYLED, themeRegistryRestyledHandler);
+		eventBroker.subscribe(WorkbenchThemeManager.Events.THEME_REGISTRY_MODIFIED, themeRegistryRestyledHandler);
 		try {
 			issuesURL = new URL("https://github.com/AObuchow/Eclipse-Spectrum-Theme/issues"); //$NON-NLS-1$
 			repoURL = new URL("https://github.com/AObuchow/Eclipse-Spectrum-Theme"); //$NON-NLS-1$
@@ -40,15 +58,18 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 		layout.marginWidth = 0;
 		layout.marginHeight = 0;
 		composite.setLayout(layout);
-		
+
 		Group customizeGroup = new Group(composite, SWT.SHADOW_ETCHED_IN);
 		customizeGroup.setText(Messages.SpectrumPreferencePage_CustomizationGroup);
 		customizeGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		customizeGroup.setLayout(layout);
-		Text colorScheme = new Text(customizeGroup, SWT.LEAD | SWT.BORDER | SWT.MULTI | SWT.READ_ONLY);
+
+		colorScheme = new StyledText(customizeGroup, SWT.LEAD | SWT.BORDER | SWT.MULTI | SWT.READ_ONLY);
+		ColorRegistry colorRegistry = Activator.getDefault().getColorRegistry();
 		colorScheme.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		String currentColorScheme = ColorManager.getCurrentColorSchemeCSS();
 		colorScheme.setText(currentColorScheme);
+		ColorManager.setStyledTextColoring(colorScheme, colorRegistry);
 
 		Group communityGroup = new Group(composite, SWT.SHADOW_ETCHED_IN);
 		communityGroup.setText(Messages.SpectrumPreferencePage_CommunityGroup);
@@ -59,5 +80,5 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 
 		return composite;
 	}
-	
+
 }
