@@ -9,5 +9,11 @@
             name="Spectrum Theme">
       </page>
    </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.aobuchow.themes.spectrum.preferences.PluginStartup">
+      </startup>
+   </extension>
 
 </plugin>

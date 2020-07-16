@@ -10,5 +10,3 @@ package
 # Eclipse Core      
 /.settings/
 /.metadata/
-# JDT-specific (Eclipse Java Development Tools)     
-.classpath

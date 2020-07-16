@@ -3,12 +3,17 @@ package com.aobuchow.themes.spectrum.preferences;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.eclipse.core.runtime.Preferences;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.preferences.ConfigurationScope;
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
+import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -16,25 +21,20 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.browser.IWebBrowser;
+import org.eclipse.ui.internal.WorkbenchPlugin;
 import org.eclipse.ui.internal.themes.WorkbenchThemeManager;
+import org.eclipse.ui.internal.util.PrefUtil;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
+import org.osgi.service.prefs.BackingStoreException;
 
 public class PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
 
 	private IWebBrowser browser;
 	private URL issuesURL;
 	private URL repoURL;
-
-	private EventHandler themeRegistryRestyledHandler = new EventHandler() {
-		@Override
-		public void handleEvent(Event event) {
-			String currentColorScheme = ColorManager.getCurrentColorSchemeCSS();
-			colorScheme.setText(currentColorScheme);
-			ColorManager.setStyledTextColoring(colorScheme, Activator.getDefault().getColorRegistry());
-		}
-	};
 	private StyledText colorScheme;
 
 	@Override
@@ -43,6 +43,8 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 		IEventBroker eventBroker = workbench.getService(IEventBroker.class);
 		eventBroker.subscribe(WorkbenchThemeManager.Events.THEME_REGISTRY_RESTYLED, themeRegistryRestyledHandler);
 		eventBroker.subscribe(WorkbenchThemeManager.Events.THEME_REGISTRY_MODIFIED, themeRegistryRestyledHandler);
+		setPreferenceStore(PlatformUI.getPreferenceStore());
+
 		try {
 			issuesURL = new URL("https://github.com/AObuchow/Eclipse-Spectrum-Theme/issues"); //$NON-NLS-1$
 			repoURL = new URL("https://github.com/AObuchow/Eclipse-Spectrum-Theme"); //$NON-NLS-1$
@@ -65,11 +67,10 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 		customizeGroup.setLayout(layout);
 
 		colorScheme = new StyledText(customizeGroup, SWT.LEAD | SWT.BORDER | SWT.MULTI | SWT.READ_ONLY);
-		ColorRegistry colorRegistry = Activator.getDefault().getColorRegistry();
 		colorScheme.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		String currentColorScheme = ColorManager.getCurrentColorSchemeCSS();
+		String currentColorScheme = Activator.getDefault().getColorManager().getCurrentColorSchemeCSS();
 		colorScheme.setText(currentColorScheme);
-		ColorManager.setStyledTextColoring(colorScheme, colorRegistry);
+		Activator.getDefault().getColorManager().setStyledTextColoring(colorScheme);
 
 		Group communityGroup = new Group(composite, SWT.SHADOW_ETCHED_IN);
 		communityGroup.setText(Messages.SpectrumPreferencePage_CommunityGroup);
@@ -80,5 +81,14 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 
 		return composite;
 	}
+
+	private EventHandler themeRegistryRestyledHandler = event -> {
+		// Update the relevant UI when the theme's colors are modified
+		if (!colorScheme.isDisposed()) {
+			String currentColorScheme = Activator.getDefault().getColorManager().getCurrentColorSchemeCSS();
+			colorScheme.setText(currentColorScheme);
+			Activator.getDefault().getColorManager().setStyledTextColoring(colorScheme);
+		}
+	};
 
 }

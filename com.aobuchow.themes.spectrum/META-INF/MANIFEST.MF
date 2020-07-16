@@ -6,5 +6,5 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: aobuchow
 Automatic-Module-Name: Spectrum_Theme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.eclipse.e4.ui.css.swt.theme;bundle-version="[0.12.700, 0.14.000)",
+Require-Bundle: org.eclipse.e4.ui.css.swt.theme;bundle-version="[0.12.700,0.14.000)",
  org.eclipse.ui
