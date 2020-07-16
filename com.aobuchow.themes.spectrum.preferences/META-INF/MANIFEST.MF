@@ -8,7 +8,10 @@ Bundle-Vendor: aobuchow
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.swt,
- org.eclipse.e4.core.services
+ org.eclipse.e4.core.services,
+ org.eclipse.e4.ui.model.workbench,
+ org.eclipse.e4.core.contexts,
+ org.eclipse.e4.ui.css.swt.theme
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.aobuchow.themes.spectrum.preferences
 Bundle-ActivationPolicy: lazy
