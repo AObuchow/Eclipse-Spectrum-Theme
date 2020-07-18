@@ -26,6 +26,8 @@ jobs:
         uses: ingomohr/push-p2-repo-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          git-user: ${{ github.actor}}
+          git-email: ${{ github.actor}}@users.noreply.github.com
           path-to-p2-repo-created-by-maven: 'releng-updatesite/target'
           path-to-p2-repo-target: 'updatesite'
           commit-message: 'add new updatesite'
