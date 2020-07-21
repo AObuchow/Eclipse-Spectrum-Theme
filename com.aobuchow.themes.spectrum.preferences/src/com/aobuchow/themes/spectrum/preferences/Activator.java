@@ -1,15 +1,7 @@
 package com.aobuchow.themes.spectrum.preferences;
 
-import org.eclipse.e4.core.services.events.IEventBroker;
-import org.eclipse.jface.resource.ColorRegistry;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.internal.themes.WorkbenchThemeManager;
-import org.eclipse.ui.internal.util.PrefUtil;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
-import org.osgi.service.event.Event;
-import org.osgi.service.event.EventHandler;
 
 /**
  * The activator class controls the plug-in life cycle
