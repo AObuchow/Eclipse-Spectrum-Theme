@@ -65,6 +65,7 @@ public class ColorManager {
 	}
 
 	public void setStyledTextColoring(StyledText colorScheme) {
+		display.asyncExec(() -> {
 		Color white = display.getSystemColor(SWT.COLOR_WHITE);
 		Color black = display.getSystemColor(SWT.COLOR_BLACK);
 		String text = colorScheme.getText();
@@ -92,6 +93,7 @@ public class ColorManager {
 		accentStyle.foreground = ColorUtils.useReadableForegroundColor(accentColor, white, black);
 		accentStyle.background = accentColor;
 		colorScheme.setStyleRange(accentStyle);
+		});
 	}
 
 	public void dispose() {
@@ -101,22 +103,21 @@ public class ColorManager {
 	}
 
 	private void updateGitColors() {
-		ColorHSL uncommittedChangeBackground = new ColorHSL(backgroundColor).modifyProperty(HSL_PROPERTY.LUMINANCE,
-				BOUND_BEHAVIOR.REVERSE, 0.1f);
-		uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(HSL_PROPERTY.SATURATION,
-				BOUND_BEHAVIOR.LIMIT, 0.1f);
-		uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(HSL_PROPERTY.HUE, BOUND_BEHAVIOR.CYCLE,
-				5f);
-		Color uncommittedChangeForeground = ColorUtils.useReadableForegroundColor(
-				uncommittedChangeBackground.getColor(), display.getSystemColor(SWT.COLOR_WHITE),
-				display.getSystemColor(SWT.COLOR_BLACK));
-
-		setColorPreference("org.eclipse.egit.ui.UncommittedChangeBackgroundColor",
-				uncommittedChangeBackground.getColor());
-		setColorPreference("org.eclipse.egit.ui.UncommittedChangeForegroundColor", uncommittedChangeForeground);
-
-		uncommittedChangeBackground.dispose();
-		uncommittedChangeForeground.dispose();
+		display.asyncExec(() -> {
+			ColorHSL uncommittedChangeBackground = new ColorHSL(backgroundColor).modifyProperty(HSL_PROPERTY.LUMINANCE,
+					BOUND_BEHAVIOR.REVERSE, 0.1f);
+			uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(HSL_PROPERTY.SATURATION,
+					BOUND_BEHAVIOR.LIMIT, 0.1f);
+			uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(HSL_PROPERTY.HUE,
+					BOUND_BEHAVIOR.CYCLE, 5f);
+			Color uncommittedChangeForeground = ColorUtils.useReadableForegroundColor(
+					uncommittedChangeBackground.getColor(), display.getSystemColor(SWT.COLOR_WHITE),
+					display.getSystemColor(SWT.COLOR_BLACK));
+			setColorPreference("org.eclipse.egit.ui.UncommittedChangeForegroundColor", uncommittedChangeForeground);
+			setColorPreference("org.eclipse.egit.ui.UncommittedChangeBackgroundColor",
+					uncommittedChangeBackground.getColor());
+			uncommittedChangeBackground.dispose();
+		});
 	}
 
 	private void setColorPreference(String preferenceKey, Color color) {
