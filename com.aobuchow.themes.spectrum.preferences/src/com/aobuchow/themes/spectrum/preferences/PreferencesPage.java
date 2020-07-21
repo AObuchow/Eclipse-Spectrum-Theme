@@ -3,17 +3,11 @@ package com.aobuchow.themes.spectrum.preferences;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.eclipse.core.runtime.Preferences;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.core.runtime.preferences.ConfigurationScope;
-import org.eclipse.core.runtime.preferences.IEclipsePreferences;
-import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.jface.preference.PreferencePage;
-import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
-import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -23,12 +17,8 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.browser.IWebBrowser;
-import org.eclipse.ui.internal.WorkbenchPlugin;
 import org.eclipse.ui.internal.themes.WorkbenchThemeManager;
-import org.eclipse.ui.internal.util.PrefUtil;
-import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
-import org.osgi.service.prefs.BackingStoreException;
 
 public class PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
 

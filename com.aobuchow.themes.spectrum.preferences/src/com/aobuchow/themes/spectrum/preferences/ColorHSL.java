@@ -22,8 +22,7 @@ public class ColorHSL {
 	}
 
 	// TODO: Add test coverage
-	public ColorHSL modifyProperty(MODIFICATION modificationType, HSL_PROPERTY propertyToModify,
-			BOUND_BEHAVIOR boundBehavior, float amount) {
+	public ColorHSL modifyProperty(HSL_PROPERTY propertyToModify, BOUND_BEHAVIOR boundBehavior, float amount) {
 		// Hue must be within the range [0, 360]
 		// Saturation must be within the range [0, 1]
 		// Luminance must be within the range [0, 1]
@@ -44,14 +43,7 @@ public class ColorHSL {
 			break;
 		}
 
-		switch (modificationType) {
-		case INCREASE:
-			newValue = newValue + amount;
-			break;
-		case DECREASE:
-			newValue = newValue - amount;
-			break;
-		}
+		newValue = newValue + amount;
 
 		switch (boundBehavior) {
 		case CYCLE:
@@ -85,7 +77,7 @@ public class ColorHSL {
 
 		return null;
 	}
-	
+
 	public void dispose() {
 		color.dispose();
 	}
@@ -110,10 +102,6 @@ public class ColorHSL {
 		return (299f * color.getRed() + 587f * color.getGreen() + 114f * color.getBlue()) / 1000;
 	}
 
-	enum MODIFICATION {
-		INCREASE, DECREASE;
-	}
-
 	/*
 	 * How the modification amount to a property should behave when hitting an upper
 	 * or lower bound.
@@ -134,8 +122,9 @@ public class ColorHSL {
 		REVERSE,
 
 		/*
-		 * Set the amount to the nearest bound. Example: Fora color with a luminance of 0.6f, increasing the luminance by 0.5f while using the LIMIT
-		 * BOUND_BEHAVIOR will result in the color having a luminance of 1f.
+		 * Set the amount to the nearest bound. Example: Fora color with a luminance of
+		 * 0.6f, increasing the luminance by 0.5f while using the LIMIT BOUND_BEHAVIOR
+		 * will result in the color having a luminance of 1f.
 		 */
 		LIMIT;
 	}

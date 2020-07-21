@@ -11,13 +11,10 @@ import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.internal.WorkbenchPlugin;
-import org.eclipse.ui.internal.util.PrefUtil;
 import org.osgi.service.prefs.BackingStoreException;
 
 import com.aobuchow.themes.spectrum.preferences.ColorHSL.BOUND_BEHAVIOR;
 import com.aobuchow.themes.spectrum.preferences.ColorHSL.HSL_PROPERTY;
-import com.aobuchow.themes.spectrum.preferences.ColorHSL.MODIFICATION;
 
 public class ColorManager {
 	private static final String BACKGROUND_COLOR_ID = "com.aobuchow.themes.spectrum.BACKGROUND_COLOR";
@@ -62,17 +59,14 @@ public class ColorManager {
 		String accentColorHex = ColorUtils.colorToHex(accentColor);
 		String baseColorHex = ColorUtils.colorToHex(baseColor);
 		String backgroundColorHex = ColorUtils.colorToHex(backgroundColor);
-		String currentColorScheme = "ColorScheme {\n" +
-				"    --background-color: " + backgroundColorHex + ";\n" +
-				"    --base-color: " + baseColorHex + ";\n" +
-				"    --accent-color: " + accentColorHex + ";\n" +
-				"}";
+		String currentColorScheme = "ColorScheme {\n" + "    --background-color: " + backgroundColorHex + ";\n"
+				+ "    --base-color: " + baseColorHex + ";\n" + "    --accent-color: " + accentColorHex + ";\n" + "}";
 		return currentColorScheme;
 	}
 
 	public void setStyledTextColoring(StyledText colorScheme) {
-		Color white = new Color(colorScheme.getDisplay(), 255, 255, 255);
-		Color black = new Color(colorScheme.getDisplay(), 0, 0, 0);
+		Color white = display.getSystemColor(SWT.COLOR_WHITE);
+		Color black = display.getSystemColor(SWT.COLOR_BLACK);
 		String text = colorScheme.getText();
 
 		StyleRange bgStyle = new StyleRange();
@@ -98,11 +92,8 @@ public class ColorManager {
 		accentStyle.foreground = ColorUtils.useReadableForegroundColor(accentColor, white, black);
 		accentStyle.background = accentColor;
 		colorScheme.setStyleRange(accentStyle);
-		
-		white.dispose();
-		black.dispose();
 	}
-	
+
 	public void dispose() {
 		accentColor.dispose();
 		baseColor.dispose();
@@ -110,30 +101,27 @@ public class ColorManager {
 	}
 
 	private void updateGitColors() {
-		ColorHSL uncommittedChangeBackground = new ColorHSL(backgroundColor).modifyProperty(MODIFICATION.INCREASE,
-				HSL_PROPERTY.LUMINANCE, BOUND_BEHAVIOR.REVERSE, 0.1f);
-		uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(MODIFICATION.INCREASE,
-				HSL_PROPERTY.SATURATION, BOUND_BEHAVIOR.LIMIT, 0.1f);
-		uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(MODIFICATION.INCREASE,
-				HSL_PROPERTY.HUE, BOUND_BEHAVIOR.CYCLE, 5f);
+		ColorHSL uncommittedChangeBackground = new ColorHSL(backgroundColor).modifyProperty(HSL_PROPERTY.LUMINANCE,
+				BOUND_BEHAVIOR.REVERSE, 0.1f);
+		uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(HSL_PROPERTY.SATURATION,
+				BOUND_BEHAVIOR.LIMIT, 0.1f);
+		uncommittedChangeBackground = uncommittedChangeBackground.modifyProperty(HSL_PROPERTY.HUE, BOUND_BEHAVIOR.CYCLE,
+				5f);
+		Color uncommittedChangeForeground = ColorUtils.useReadableForegroundColor(
+				uncommittedChangeBackground.getColor(), display.getSystemColor(SWT.COLOR_WHITE),
+				display.getSystemColor(SWT.COLOR_BLACK));
 
-		Color uncommittedChangeForeground;
-		if (uncommittedChangeBackground.getPerceivedLuminance() >= 127.5f) {
-			uncommittedChangeForeground = new Color(display, 0, 0, 0);
-		} else {
-			uncommittedChangeForeground = new Color(display, 255, 255, 255);
-		}
 		setColorPreference("org.eclipse.egit.ui.UncommittedChangeBackgroundColor",
 				uncommittedChangeBackground.getColor());
-		setColorPreference("org.eclipse.egit.ui.UncommittedChangeForegroundColor",
-				uncommittedChangeForeground);
-		
+		setColorPreference("org.eclipse.egit.ui.UncommittedChangeForegroundColor", uncommittedChangeForeground);
+
 		uncommittedChangeBackground.dispose();
 		uncommittedChangeForeground.dispose();
 	}
 
 	private void setColorPreference(String preferenceKey, Color color) {
-		// We can't use PlatformUI.getPreferenceStore() as it won't affect preferences for plugins such as EGit
+		// We can't use PlatformUI.getPreferenceStore() as it won't affect preferences
+		// for plugins such as EGit
 		PlatformUI.getWorkbench().getPreferenceStore().setValue(preferenceKey,
 				String.format("%d,%d,%d", color.getRed(), color.getGreen(), color.getBlue()));
 	}
