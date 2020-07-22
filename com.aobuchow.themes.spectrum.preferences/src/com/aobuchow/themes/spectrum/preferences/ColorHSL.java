@@ -54,8 +54,7 @@ public class ColorHSL {
 			}
 			break;
 		case LIMIT:
-			newValue = Math.min(newValue, max);
-			newValue = Math.max(newValue, min);
+			newValue = setFloatBounds(newValue, min, max);
 			break;
 		case REVERSE:
 			if (newValue < min) {
@@ -100,6 +99,27 @@ public class ColorHSL {
 
 	public float getPerceivedLuminance() {
 		return (299f * color.getRed() + 587f * color.getGreen() + 114f * color.getBlue()) / 1000;
+	}
+
+	public ColorHSL setHue(float hue) {
+		hue = setFloatBounds(hue, 0, 360);
+		return new ColorHSL(hue, this.getSaturation(), this.getLuminance());
+	}
+
+	public ColorHSL setSaturation(float saturation) {
+		saturation = setFloatBounds(saturation, 0, 1);
+		return new ColorHSL(this.getHue(), saturation, this.getLuminance());
+	}
+
+	public ColorHSL setLuminance(float luminance) {
+		luminance = setFloatBounds(luminance, 0, 1);
+		return new ColorHSL(this.getHue(), this.getSaturation(), luminance);
+	}
+	
+	private static float setFloatBounds(float value, float min, float max) {
+		value = Math.min(value, max);
+		value = Math.max(value, min);
+		return value;
 	}
 
 	/*

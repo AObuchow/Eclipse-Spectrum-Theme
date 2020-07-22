@@ -1,7 +1,11 @@
 package com.aobuchow.themes.spectrum.preferences;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.e4.core.contexts.IEclipseContext;
+import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.e4.ui.css.swt.theme.IThemeEngine;
 import org.eclipse.e4.ui.model.application.MApplication;
 import org.eclipse.jface.resource.ColorRegistry;
@@ -11,6 +15,7 @@ import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.internal.themes.WorkbenchThemeManager;
 import org.osgi.service.prefs.BackingStoreException;
 
 import com.aobuchow.themes.spectrum.preferences.ColorHSL.BOUND_BEHAVIOR;
@@ -27,15 +32,19 @@ public class ColorManager {
 	private IThemeEngine engine;
 	private final String THEME_ID = "spectrum.dark.theme.id";
 	private Display display;
+	private IEventBroker eventBroker;
 
 	public ColorManager() {
 		MApplication application = PlatformUI.getWorkbench().getService(MApplication.class);
 		IEclipseContext context = application.getContext();
 		engine = context.get(IThemeEngine.class);
 		display = PlatformUI.getWorkbench().getDisplay();
+		eventBroker = PlatformUI.getWorkbench().getService(IEventBroker.class);
 		updateColors();
 	}
 
+	// Should only be called from PluginStartup theme registry listener, clients
+	// should use saveColors() instead
 	public void updateColors() {
 		this.colorRegistry = PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getColorRegistry();
 		accentColor = colorRegistry.get(ACCENT_COLOR_ID);
@@ -45,6 +54,18 @@ public class ColorManager {
 			updateGitColors();
 			savePreferences();
 		}
+	}
+
+	public void saveColors() {
+		setColorPreference(BACKGROUND_COLOR_ID, backgroundColor);
+		colorRegistry.put(BACKGROUND_COLOR_ID, backgroundColor.getRGB());
+		setColorPreference(BASE_COLOR_ID, baseColor);
+		colorRegistry.put(BASE_COLOR_ID, baseColor.getRGB());
+		setColorPreference(ACCENT_COLOR_ID, accentColor);
+		colorRegistry.put(ACCENT_COLOR_ID, accentColor.getRGB());
+		savePreferences();
+		updateColors();
+		eventBroker.send(WorkbenchThemeManager.Events.THEME_REGISTRY_MODIFIED, null);
 	}
 
 	private void savePreferences() {
@@ -66,33 +87,33 @@ public class ColorManager {
 
 	public void setStyledTextColoring(StyledText colorScheme) {
 		display.asyncExec(() -> {
-		Color white = display.getSystemColor(SWT.COLOR_WHITE);
-		Color black = display.getSystemColor(SWT.COLOR_BLACK);
-		String text = colorScheme.getText();
+			Color white = display.getSystemColor(SWT.COLOR_WHITE);
+			Color black = display.getSystemColor(SWT.COLOR_BLACK);
+			String text = colorScheme.getText();
 
-		StyleRange bgStyle = new StyleRange();
-		bgStyle.start = text.indexOf("--background-color:") + "--background-color:".length() + 1;
-		bgStyle.length = 7;
-		bgStyle.fontStyle = SWT.BOLD;
-		bgStyle.background = backgroundColor;
-		bgStyle.foreground = ColorUtils.useReadableForegroundColor(backgroundColor, white, black);
-		colorScheme.setStyleRange(bgStyle);
+			StyleRange bgStyle = new StyleRange();
+			bgStyle.start = text.indexOf("--background-color:") + "--background-color:".length() + 1;
+			bgStyle.length = 7;
+			bgStyle.fontStyle = SWT.BOLD;
+			bgStyle.background = backgroundColor;
+			bgStyle.foreground = ColorUtils.useReadableForegroundColor(backgroundColor, white, black);
+			colorScheme.setStyleRange(bgStyle);
 
-		StyleRange baseStyle = new StyleRange();
-		baseStyle.start = text.indexOf("--base-color:") + "--base-color:".length() + 1;
-		baseStyle.length = 7;
-		baseStyle.fontStyle = SWT.BOLD;
-		baseStyle.background = baseColor;
-		baseStyle.foreground = ColorUtils.useReadableForegroundColor(baseColor, white, black);
-		colorScheme.setStyleRange(baseStyle);
+			StyleRange baseStyle = new StyleRange();
+			baseStyle.start = text.indexOf("--base-color:") + "--base-color:".length() + 1;
+			baseStyle.length = 7;
+			baseStyle.fontStyle = SWT.BOLD;
+			baseStyle.background = baseColor;
+			baseStyle.foreground = ColorUtils.useReadableForegroundColor(baseColor, white, black);
+			colorScheme.setStyleRange(baseStyle);
 
-		StyleRange accentStyle = new StyleRange();
-		accentStyle.start = text.indexOf("--accent-color:") + "--accent-color:".length() + 1;
-		accentStyle.length = 7;
-		accentStyle.fontStyle = SWT.BOLD;
-		accentStyle.foreground = ColorUtils.useReadableForegroundColor(accentColor, white, black);
-		accentStyle.background = accentColor;
-		colorScheme.setStyleRange(accentStyle);
+			StyleRange accentStyle = new StyleRange();
+			accentStyle.start = text.indexOf("--accent-color:") + "--accent-color:".length() + 1;
+			accentStyle.length = 7;
+			accentStyle.fontStyle = SWT.BOLD;
+			accentStyle.foreground = ColorUtils.useReadableForegroundColor(accentColor, white, black);
+			accentStyle.background = accentColor;
+			colorScheme.setStyleRange(accentStyle);
 		});
 	}
 
@@ -125,6 +146,45 @@ public class ColorManager {
 		// for plugins such as EGit
 		PlatformUI.getWorkbench().getPreferenceStore().setValue(preferenceKey,
 				String.format("%d,%d,%d", color.getRed(), color.getGreen(), color.getBlue()));
+	}
+
+	public Color getAccentColor() {
+		return accentColor;
+	}
+
+	public void setAccentColor(Color accentColor) {
+		this.accentColor = accentColor;
+	}
+
+	public Color getBaseColor() {
+		return baseColor;
+	}
+
+	public void setBaseColor(Color baseColor) {
+		this.baseColor = baseColor;
+	}
+
+	public Color getBackgroundColor() {
+		return backgroundColor;
+	}
+
+	public void setBackgroundColor(Color backgroundColor) {
+		this.backgroundColor = backgroundColor;
+	}
+
+	public List<Color> getThemeColors() {
+		List<Color> colors = new ArrayList<>();
+		colors.add(accentColor);
+		colors.add(baseColor);
+		colors.add(backgroundColor);
+		return colors;
+	}
+
+	public void resetColors() {
+		this.setBackgroundColor(new Color(display, 23, 23, 27));
+		this.setBaseColor(new Color(display, 47, 47, 47));
+		this.setAccentColor(new Color(display, 215, 0, 0));
+		this.saveColors();
 	}
 
 }

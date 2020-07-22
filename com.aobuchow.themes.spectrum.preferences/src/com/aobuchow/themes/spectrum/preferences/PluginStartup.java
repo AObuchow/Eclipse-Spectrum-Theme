@@ -17,6 +17,9 @@ public class PluginStartup implements IStartup {
 
 	}
 
+	// TODO: investigate why this listener is required here. Setting it in the
+	// ColorManager doesn't seem to
+	// respond to theme registry events.
 	private EventHandler themeRegistryRestyledHandler = event -> {
 		// TODO: Update git uncommitted changes font to use project explorer font?
 		Activator.getDefault().getColorManager().updateColors();
