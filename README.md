@@ -1,5 +1,22 @@
 # Eclipse Spectrum Theme 🌌✨
 
+<a href="https://marketplace.eclipse.org/content/spectrum-dark-theme">
+<img src ="https://img.shields.io/badge/Spectrum-Theme-d70000?logo=eclipse&logoColor=35ddd3" />
+</a>
+<a href="https://github.com/AObuchow/Eclipse-Spectrum-Theme/graphs/commit-activity">
+<img src ="https://img.shields.io/github/commit-activity/m/AObuchow/Eclipse-Spectrum-Theme" />
+</a>
+<a href="https://marketplace.eclipse.org/content/spectrum-dark-theme">
+<img src ="https://img.shields.io/eclipse-marketplace/v/spectrum-dark-theme" />
+</a>
+<a href="https://marketplace.eclipse.org/content/spectrum-dark-theme">
+<img src ="https://img.shields.io/eclipse-marketplace/favorites/spectrum-dark-theme" />
+</a>
+<a href="https://marketplace.eclipse.org/content/spectrum-dark-theme">
+<img src ="https://img.shields.io/eclipse-marketplace/dt/spectrum-dark-theme" />
+</a>
+<br />
+
 Give Eclipse 4.16+ a *fresh* new look with **Spectrum Theme**. 
 
 This free and open-source theme plugin enhances your Eclipse IDE experience with a
