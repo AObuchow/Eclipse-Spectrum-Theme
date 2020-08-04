@@ -29,7 +29,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Push Updatesite
-        uses: ingomohr/push-p2-repo-action@v1
+        uses: ingomohr/push-p2-repo-action@v1_0_1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git-user: ${{ github.actor}}
