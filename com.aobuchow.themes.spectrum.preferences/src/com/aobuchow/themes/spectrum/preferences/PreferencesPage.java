@@ -1,26 +1,17 @@
 package com.aobuchow.themes.spectrum.preferences;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.eclipse.core.runtime.Status;
 import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Rectangle;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Scale;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.browser.IWebBrowser;
 import org.eclipse.ui.internal.themes.WorkbenchThemeManager;
 import org.osgi.service.event.EventHandler;
 
@@ -29,23 +20,17 @@ import com.aobuchow.themes.spectrum.preferences.ColorHSL.HSL_PROPERTY;
 
 public class PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
 
-	private IWebBrowser browser;
-	private URL issuesURL;
-	private URL repoURL;
-	private StyledText colorScheme;
 	private Color prevAccentColor;
 	private Color prevBaseColor;
 	private IEventBroker eventBroker;
 	private ColorManager colorManager;
 	private Color prevBackgroundColor;
-	private Scale hueScale;
-	private Scale saturationScale;
-	private Scale luminanceScale;
+
+	private SpectrumPreferencesControl preferenceControl;
 
 	@Override
 	public void init(IWorkbench workbench) {
 		colorManager = Activator.getDefault().getColorManager();
-		browser = BrowserUtils.newBrowser();
 		eventBroker = workbench.getService(IEventBroker.class);
 		eventBroker.subscribe(WorkbenchThemeManager.Events.THEME_REGISTRY_RESTYLED, themeRegistryRestyledHandler);
 		eventBroker.subscribe(WorkbenchThemeManager.Events.THEME_REGISTRY_MODIFIED, themeRegistryRestyledHandler);
@@ -54,51 +39,33 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 		prevBackgroundColor = colorManager.getBackgroundColor();
 		prevBaseColor = colorManager.getBaseColor();
 		prevAccentColor = colorManager.getAccentColor();
-
-		try {
-			issuesURL = new URL("https://github.com/AObuchow/Eclipse-Spectrum-Theme/issues"); //$NON-NLS-1$
-			repoURL = new URL("https://github.com/AObuchow/Eclipse-Spectrum-Theme"); //$NON-NLS-1$
-		} catch (MalformedURLException e) {
-			Activator.getDefault().getLog().log(new Status(ERROR, getClass(), e.getMessage()));
-		}
 	}
 
 	@Override
 	protected Control createContents(Composite parent) {
-		Composite composite = new Composite(parent, SWT.NONE);
-		GridLayout layout = new GridLayout(1, true);
-		layout.marginWidth = 0;
-		layout.marginHeight = 0;
-		composite.setLayout(layout);
 
-		Group customizeGroup = new Group(composite, SWT.SHADOW_ETCHED_IN);
-		customizeGroup.setText(Messages.SpectrumPreferencePage_CustomizationGroup);
-		customizeGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		customizeGroup.setLayout(layout);
+		preferenceControl = new SpectrumPreferencesControl(parent, SWT.NONE);
 
-		addHSLCustomization(customizeGroup);
+		addHSLCustomization(preferenceControl);
 
-		colorScheme = new StyledText(customizeGroup, SWT.LEAD | SWT.BORDER | SWT.MULTI | SWT.READ_ONLY);
-		colorScheme.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		preferenceControl.getRepoLink().addSelectionListener(
+				SelectionListener.widgetSelectedAdapter(e -> openURL("repo", Messages.SpectrumPreferencePage_GithubURL)));
+
+		preferenceControl.getIssuesLink().addSelectionListener(SelectionListener
+				.widgetSelectedAdapter(e -> openURL("issues", Messages.SpectrumPreferencePage_GithubURL_Issues)));
+
 		String currentColorScheme = Activator.getDefault().getColorManager().getCurrentColorSchemeCSS();
-		colorScheme.setText(currentColorScheme);
-		Activator.getDefault().getColorManager().setStyledTextColoring(colorScheme);
+		final StyledText cssText = preferenceControl.getCssText();
+		cssText.setText(currentColorScheme);
+		Activator.getDefault().getColorManager().setStyledTextColoring(cssText);
 
-		Group communityGroup = new Group(composite, SWT.SHADOW_ETCHED_IN);
-		communityGroup.setText(Messages.SpectrumPreferencePage_CommunityGroup);
-		communityGroup.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		communityGroup.setLayout(layout);
-		BrowserUtils.createLinkURL(communityGroup, Messages.SpectrumPreferencePage_RepositoryLink, repoURL, browser);
-		BrowserUtils.createLinkURL(communityGroup, Messages.SpectrumPreferencePage_BugReportLink, issuesURL, browser);
+		refresh();
 
-		return composite;
+		return preferenceControl;
 	}
 
-	private void addHSLCustomization(Group customizeGroup) {
-		Text hueLabel = new Text(customizeGroup, SWT.BOLD);
-		hueLabel.setText(Messages.PreferencesPage_LabelHue);
-		hueScale = newScale(customizeGroup, 0, 360,
-				(int) new ColorHSL(colorManager.getBackgroundColor()).getHue());
+	private void addHSLCustomization(SpectrumPreferencesControl control) {
+		final Scale hueScale = control.getHueScale();
 		hueScale.addListener(SWT.Selection, event -> {
 			int selectionValue = hueScale.getSelection();
 			ColorHSL newBackgroundColor = new ColorHSL(colorManager.getBackgroundColor()).setHue(selectionValue);
@@ -111,11 +78,7 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 			colorManager.saveColors();
 		});
 
-		Text saturationLabel = new Text(customizeGroup, SWT.BOLD);
-		saturationLabel.setLayoutData(new GridData(SWT.BEGINNING, SWT.BEGINNING, false, true));
-		saturationLabel.setText(Messages.PreferencesPage_LabelSaturation);
-		saturationScale = newScale(customizeGroup, 0, 100,
-				(int) (new ColorHSL(colorManager.getBackgroundColor()).getSaturation() * 100));
+		final Scale saturationScale = control.getSaturationScale();
 		saturationScale.addListener(SWT.Selection, event -> {
 			float selectionValue = ((float) saturationScale.getSelection()) / 100;
 			ColorHSL newBackgroundColor = new ColorHSL(colorManager.getBackgroundColor()).setSaturation(selectionValue);
@@ -123,12 +86,9 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 			colorManager.saveColors();
 		});
 
-		Text luminanceLabel = new Text(customizeGroup, SWT.BOLD);
-		luminanceLabel.setText(Messages.PreferencesPage_LabelLuminance);
-		luminanceScale = newScale(customizeGroup, 0, 100,
-				(int) (new ColorHSL(colorManager.getBackgroundColor()).getLuminance() * 100));
-		luminanceScale.addListener(SWT.Selection, event -> {
-			float selectionValue = ((float) luminanceScale.getSelection()) / 100;
+		final Scale brightnessScale = control.getBrightnessScale();
+		brightnessScale.addListener(SWT.Selection, event -> {
+			float selectionValue = ((float) brightnessScale.getSelection()) / 100;
 			ColorHSL newBackgroundColor = new ColorHSL(colorManager.getBackgroundColor()).setLuminance(selectionValue);
 			colorManager.setBackgroundColor(newBackgroundColor.getColor());
 			colorManager.saveColors();
@@ -140,14 +100,14 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 		prevBackgroundColor = colorManager.getBackgroundColor();
 		prevBaseColor = colorManager.getBaseColor();
 		prevAccentColor = colorManager.getAccentColor();
-		updateScales();
+		refresh();
 		return super.performOk();
 	}
 
 	@Override
 	protected void performDefaults() {
 		colorManager.resetColors();
-		updateScales();
+		refresh();
 		super.performDefaults();
 	}
 
@@ -160,36 +120,43 @@ public class PreferencesPage extends PreferencePage implements IWorkbenchPrefere
 		prevBackgroundColor = colorManager.getBackgroundColor();
 		prevBaseColor = colorManager.getBaseColor();
 		prevAccentColor = colorManager.getAccentColor();
-		updateScales();
+		refresh();
 		return super.performCancel();
 	}
 
 	private EventHandler themeRegistryRestyledHandler = event -> {
 		// Update the relevant UI when the theme's colors are modified
-		if (!colorScheme.isDisposed()) {
+		if (!getControl().isDisposed()) {
 			String currentColorScheme = Activator.getDefault().getColorManager().getCurrentColorSchemeCSS();
-			colorScheme.setText(currentColorScheme);
-			Activator.getDefault().getColorManager().setStyledTextColoring(colorScheme);
+			final StyledText cssText = preferenceControl.getCssText();
+			cssText.setText(currentColorScheme);
+			Activator.getDefault().getColorManager().setStyledTextColoring(cssText);
 		}
 	};
 
-	private void updateScales() {
-		hueScale.setSelection((int) new ColorHSL(colorManager.getBackgroundColor()).getHue());
-		saturationScale.setSelection((int) (new ColorHSL(colorManager.getBackgroundColor()).getSaturation() * 100));
-		luminanceScale.setSelection((int) (new ColorHSL(colorManager.getBackgroundColor()).getLuminance() * 100));
+	private void refresh() {
+		refreshScales();
+		refreshCssText();
 	}
 
-	private static Scale newScale(Composite parent, int min, int max, int selection) {
-		Scale scale = new Scale(parent, SWT.BORDER);
-		scale.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-		Rectangle clientArea = parent.getClientArea();
-		scale.setBounds(clientArea.x, clientArea.y, clientArea.width, clientArea.height);
-		scale.setMaximum(max);
-		scale.setMinimum(min);
-		scale.setSelection(selection);
-		scale.setPageIncrement(5);
-		scale.setIncrement(5);
-		return scale;
+	private void refreshScales() {
+		preferenceControl.getHueScale().setSelection((int) new ColorHSL(colorManager.getBackgroundColor()).getHue());
+		preferenceControl.getSaturationScale()
+				.setSelection((int) (new ColorHSL(colorManager.getBackgroundColor()).getSaturation() * 100));
+		preferenceControl.getBrightnessScale()
+				.setSelection((int) (new ColorHSL(colorManager.getBackgroundColor()).getLuminance() * 100));
+	}
+
+	private void refreshCssText() {
+		String currentColorScheme = Activator.getDefault().getColorManager().getCurrentColorSchemeCSS();
+		final StyledText cssText = preferenceControl.getCssText();
+		if (!cssText.getText().equals(currentColorScheme)) {
+			cssText.setText(currentColorScheme);
+		}
+	}
+
+	private void openURL(String category, String url) {
+		BrowserUtils.openUrl(category, url);
 	}
 
 }
