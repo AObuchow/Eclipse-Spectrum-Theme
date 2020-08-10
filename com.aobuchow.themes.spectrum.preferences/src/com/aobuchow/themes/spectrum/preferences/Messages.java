@@ -11,6 +11,9 @@ public class Messages extends NLS {
 	public static String SpectrumPreferencePage_CommunityGroup;
 	public static String SpectrumPreferencePage_CustomizationGroup;
 	public static String SpectrumPreferencePage_RepositoryLink;
+	public static String SpectrumPreferencePage_GithubURL_Issues;
+	public static String SpectrumPreferencePage_GithubURL;
+
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
