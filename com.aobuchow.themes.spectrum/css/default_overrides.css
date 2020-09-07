@@ -19,8 +19,8 @@
 
 Tree,
 Table {
-  color: white;
-  swt-header-color: white;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
+  swt-header-color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
   swt-header-background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
   swt-selection-background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
   swt-selection-foreground-color: black;
@@ -41,11 +41,11 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 
 .MPartStack.active Table {
   background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
-  color: #ccc;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 .View {
   background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';
-  color: #f5f5f5;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 /* ###################### Hyperlink ########################## */
@@ -77,7 +77,7 @@ Composite#org-eclipse-ui-navigator-ProjectExplorer * {
 /* Color in between text editors */
 .MPartSashContainer {
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-  color: #eeeeee;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 /* ###################### Form Editors ########################## */
@@ -176,7 +176,7 @@ Section {
 
 .MPart Section > Label {
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-  color: white;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 ExpandableComposite {
@@ -204,7 +204,7 @@ Shell > Composite > Composite > Composite > Composite > Composite > List,
 Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][style~='SWT.SHADOW_ETCHED_OUT'][style~='SWT.RESIZE'][style~='SWT.MENU'][style~='SWT.FULL_SELECTION'][style~='SWT.DATE'] > Composite > List,
 Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][style~='SWT.SHADOW_ETCHED_OUT'][style~='SWT.RESIZE'][style~='SWT.MENU'][style~='SWT.FULL_SELECTION'][style~='SWT.DATE'] > Composite > * > List {
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR'; /* TODO: This should be SECONDARY_COLOR_DULL */
-  color: white;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 #org-eclipse-ui-main-toolbar,
@@ -213,7 +213,7 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR'
     '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR' 100%;
   handle-image: none;
-  color: #ebe8e4;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 /* ############################## Console View ############################## */
@@ -222,7 +222,7 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
 #org-eclipse-ui-console-ConsoleView .MPart StyledText,
 #org-eclipse-ui-console-ConsoleView .MPart PageBook Label {
   background-color: black;
-  color: white;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 /* ############################## Global Styles ############################## */
@@ -254,7 +254,7 @@ Shell[style~='SWT.RADIO'][style~='SWT.CASCADE'][style~='SWT.SHADOW_ETCHED_IN'][s
 .MPart DependenciesComposite > SashForm > Section > * {
   /* Section > DependenciesComposite$... */
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-  color: #eeeeee;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 Shell,
@@ -302,7 +302,7 @@ Composite > *,
 Composite > * > *,
 Group > StyledText {
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-  color: #eeeeee;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 Composite > StyledText,
@@ -310,7 +310,7 @@ Shell [style~='SWT.DROP_DOWN'] > StyledText, /* for eg. folded code popup (but i
 SashForm > StyledText {
   /*	Fix StyledText inside a SashForm */
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
-  color: #eeeeee;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 .MPart Table,
@@ -321,7 +321,7 @@ SashForm > StyledText {
 .MPart PageBook > Label,
 .MPart PageBook > SashForm {
   background-color: #161616; /* hard coded since color definitions dont seem to work here? */
-  color: #ccc;
+  color: '#com-aobuchow-themes-spectrum-PRIMARY_FONT_COLOR';
 }
 
 /* Toolbar should inherit the colors of its container to avoid drawing artifacts*/
