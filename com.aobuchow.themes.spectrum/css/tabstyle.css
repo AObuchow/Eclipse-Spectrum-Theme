@@ -27,6 +27,7 @@ CTabFolder {
   swt-unselected-hot-tab-color-background: '#com-aobuchow-themes-spectrum-TAB_HOVER_COLOR'; /* Bug 465711 */
   swt-selected-tab-highlight: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';
   swt-selected-highlight-top: true;
+  swt-draw-custom-tab-content-background: true;
 }
 
 CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
