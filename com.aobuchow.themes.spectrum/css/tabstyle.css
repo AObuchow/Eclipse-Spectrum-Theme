@@ -60,12 +60,12 @@ CTabFolder[style~='SWT.DOWN'][style~='SWT.BOTTOM'] {
 .MPartStack.active > CTabItem,
 .MPartStack.active > CTabItem CLabel {
   background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
-  color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
+  color: '#com-aobuchow-themes-spectrum-INACTIVE_FONT_COLOR';
 }
 
 .MPartStack.active > CTabItem:selected,
 .MPartStack.active > CTabItem:selected CLabel {
-  color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
+  color: '#com-aobuchow-themes-spectrum-ACTIVE_FONT_COLOR';
 }
 
 CTabFolder > Composite#ToolbarComposite {
@@ -88,7 +88,7 @@ CTabFolder Scale {
 CTabItem,
 CTabItem CLabel {
   background-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* HACK for background of CTabFolder inner Toolbars */
-  color: '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR';
+  color: '#com-aobuchow-themes-spectrum-INACTIVE_FONT_COLOR';
 }
 
 /* ###################### Below used to be in default overrides  ########################## */
@@ -96,15 +96,15 @@ CTabItem CLabel {
 /* TODO: Maybe inactive tabs should have a darker color? */
 CTabItem:selected,
 CTabItem:selected CLabel {
-  color: white;
+  color: '#com-aobuchow-themes-spectrum-INACTIVE_FONT_COLOR';
 }
 
 .MPartStack.active > CTabItem,
 .MPartStack.active > CTabItem CLabel {
   /* background-color: '#com-aobuchow-themes-spectrum-ACCENT_COLOR';  HACK for background of CTabFolder inner Toolbars */
-  color: white;
+  color: '#com-aobuchow-themes-spectrum-INACTIVE_FONT_COLOR';
 }
 
 .MPartStack.active.noFocus > CTabItem:selected {
-  color: white;
+  color: '#com-aobuchow-themes-spectrum-INACTIVE_FONT_COLOR';
 }

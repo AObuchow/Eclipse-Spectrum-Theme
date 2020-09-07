@@ -67,6 +67,24 @@
             The color used when an hovering on a tab in Spectrum theme.
          </description>
       </colorDefinition>
+      <colorDefinition
+            id="com.aobuchow.themes.spectrum.PRIMARY_FONT_COLOR"
+            isEditable="false"
+            label="Primary Font Color"
+            value="255,255,255">
+      </colorDefinition>
+      <colorDefinition
+            id="com.aobuchow.themes.spectrum.ACTIVE_FONT_COLOR"
+            isEditable="false"
+            label="Active Font Color"
+            value="255,255,255">
+      </colorDefinition>
+      <colorDefinition
+            id="com.aobuchow.themes.spectrum.INACTIVE_FONT_COLOR"
+            isEditable="false"
+            label="Inactive Font Color"
+            value="255,255,255">
+      </colorDefinition>
    </extension>
 
 </plugin>

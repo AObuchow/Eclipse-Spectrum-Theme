@@ -52,6 +52,7 @@ public class ColorManager {
 		backgroundColor = colorRegistry.get(BACKGROUND_COLOR_ID);
 		if (engine.getActiveTheme().getId().equals(THEME_ID)) {
 			updateGitColors();
+			updateThemeFontColors();
 			savePreferences();
 		}
 	}
@@ -137,7 +138,23 @@ public class ColorManager {
 			setColorPreference("org.eclipse.egit.ui.UncommittedChangeForegroundColor", uncommittedChangeForeground);
 			setColorPreference("org.eclipse.egit.ui.UncommittedChangeBackgroundColor",
 					uncommittedChangeBackground.getColor());
-			uncommittedChangeBackground.dispose();
+		});
+	}
+	
+	private void updateThemeFontColors() {
+		display.asyncExec(() -> {
+			Color primaryFontColor = ColorUtils.useReadableForegroundColor(
+					backgroundColor, display.getSystemColor(SWT.COLOR_WHITE),
+					display.getSystemColor(SWT.COLOR_BLACK));
+			Color activeFontColor = ColorUtils.useReadableForegroundColor(
+					accentColor, display.getSystemColor(SWT.COLOR_WHITE),
+					display.getSystemColor(SWT.COLOR_BLACK));
+			Color inactiveFontColor = ColorUtils.useReadableForegroundColor(
+					baseColor, display.getSystemColor(SWT.COLOR_WHITE),
+					display.getSystemColor(SWT.COLOR_BLACK));
+			setColorPreference("com.aobuchow.themes.spectrum.PRIMARY_FONT_COLOR", primaryFontColor);
+			setColorPreference("com.aobuchow.themes.spectrum.ACTIVE_FONT_COLOR", activeFontColor);
+			setColorPreference("com.aobuchow.themes.spectrum.INACTIVE_FONT_COLOR", inactiveFontColor);
 		});
 	}
 
