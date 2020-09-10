@@ -4,6 +4,7 @@ import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
@@ -17,6 +18,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
  * <p>
  * <ul>
  * <li>Has scales for the three settings; hue, saturation and brightness</li>
+ * <li>Has a 4 radio buttons to select which theme color to affect; all, accent, base or background</li>
  * <li>Has a CSS scheme text widget</li>
  * <li>Has links to open the Gitub repo page and the Github issues page</li>
  * <ul>
@@ -29,6 +31,14 @@ public class SpectrumPreferencesControl extends Composite {
 	private Scale saturationScale;
 
 	private Scale brightnessScale;
+	
+	private Button allColorsButton;
+	
+	private Button accentColorButton;
+	
+	private Button baseColorButton;
+	
+	private Button backgroundColorButton;
 
 	private StyledText cssText;
 
@@ -63,12 +73,29 @@ public class SpectrumPreferencesControl extends Composite {
 		group.setLayoutData(GridDataFactory.fillDefaults().grab(true, true).create());
 		group.setText(Messages.SpectrumPreferencePage_CustomizationGroup);
 		group.setLayout(GridLayoutFactory.swtDefaults().numColumns(2).create());
+		
+		createSelectedColorButtons(group);
 
 		hueScale = createScaleLine(group, Messages.PreferencesPage_LabelHue, 0, 360);
 		saturationScale = createScaleLine(group, Messages.PreferencesPage_LabelSaturation, 0, 100);
 		brightnessScale = createScaleLine(group, Messages.PreferencesPage_LabelLuminance, 0, 100);
 
 		createCssExandable(group);
+	}
+
+	private void createSelectedColorButtons(Group group) {
+		allColorsButton = new Button(group, SWT.RADIO);
+		allColorsButton.setText("Global Colors");
+		allColorsButton.setLayoutData(GridDataFactory.fillDefaults().grab(true, false).create());
+		accentColorButton = new Button(group, SWT.RADIO);
+		accentColorButton.setText("Accent Color");
+		accentColorButton.setLayoutData(GridDataFactory.fillDefaults().grab(true, false).create());
+		baseColorButton = new Button(group, SWT.RADIO);
+		baseColorButton.setText("Base Color");
+		baseColorButton.setLayoutData(GridDataFactory.fillDefaults().grab(true, false).create());
+		backgroundColorButton = new Button(group, SWT.RADIO);
+		backgroundColorButton.setText("Background Color");
+		backgroundColorButton.setLayoutData(GridDataFactory.fillDefaults().grab(true, false).create());
 	}
 
 	private Scale createScaleLine(Composite parent, String labelText, int min, int max) {
@@ -136,6 +163,22 @@ public class SpectrumPreferencesControl extends Composite {
 
 	public Link getIssuesLink() {
 		return issuesLink;
+	}
+
+	public Button getAllColorsButton() {
+		return allColorsButton;
+	}
+
+	public Button getAccentColorButton() {
+		return accentColorButton;
+	}
+
+	public Button getBaseColorButton() {
+		return baseColorButton;
+	}
+
+	public Button getBackgroundColorButton() {
+		return backgroundColorButton;
 	}
 
 }
