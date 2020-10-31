@@ -1,0 +1,5 @@
+@import url('Spectrum.css');
+
+Tree, Table {
+swt-lines-visible: false;
+}

@@ -6,7 +6,20 @@
       <theme
             basestylesheeturi="css/Spectrum.css"
             id="spectrum.dark.theme.id"
-            label="Spectrum">
+            label="Spectrum"
+            os="linux">
+      </theme>
+      <theme
+            basestylesheeturi="css/windows.css"
+            id="spectrum.dark.theme.id"
+            label="Spectrum"
+            os="win32">
+      </theme>
+      <theme
+            basestylesheeturi="css/Spectrum.css"
+            id="spectrum.dark.theme.id"
+            label="Spectrum"
+            os="macosx">
       </theme>
    </extension>
    <extension

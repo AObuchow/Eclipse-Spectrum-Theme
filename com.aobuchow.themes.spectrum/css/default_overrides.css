@@ -359,3 +359,27 @@ ProgressIndicator {
   background-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
   color: #eeeeee;
 }
+
+
+/* ############################## Issue 137  ############################## */
+
+TabbedPropertyTitle > CLabel {
+	color: white;
+}
+
+TabbedPropertyTitle {
+	swt-backgroundGradientStart-color:   #2f2f2f;
+	swt-backgroundGradientEnd-color:    #2f2f2f;
+	swt-backgroundBottomKeyline1-color:  #2f2f2f;
+	swt-backgroundBottomKeyline2-color:  #2f2f2f;
+}
+
+TabbedPropertyList {
+	swt-tabNormalShadow-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';             /* color of shadow lines around the tabs */
+	swt-tabDarkShadow-color: '#com-aobuchow-themes-spectrum-BASE_COLOR'; /* line color of the tiny scroll triangle (at top / at bottom) */
+	swt-tabAreaBackground-color: '#com-aobuchow-themes-spectrum-BASE_COLOR';    /*same as canvas*/
+	swt-tabBackground-color: '#com-aobuchow-themes-spectrum-BACKGROUND_COLOR';
+	color: white; /* text color in the tab / tab area */
+}
+
+/* ####################################################################### */
